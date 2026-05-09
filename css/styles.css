@@ -1,0 +1,1343 @@
+/* ================================================================
+   LoopLeaf Website – styles.css
+   Mobile-first, responsive
+   ================================================================ */
+
+
+/* --- 1. FONTS (lokal eingebunden) --- */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('../assets/fonts/caudex/Caudex-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('../assets/fonts/caudex/Caudex-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('../assets/fonts/caudex/Caudex-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('../assets/fonts/caudex/Caudex-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* --- 2. CUSTOM PROPERTIES --- */
+
+:root {
+  /* Grundfarben */
+  --color-cream:       #F7F4EC;   /* Seitenhintergrund, helle Sektionen */
+  --color-dark-green:  #26352F;   /* Feature-Sektion, Überschriften, Buttons */
+
+  /* Weitere Grundfarben */
+  --color-muted:       #C3C4BD;   /* Trennlinien, dezente Ränder */
+  --color-mid-green:   #8F958E;   /* sekundärer Text, gedämpfte Elemente */
+  --color-text-soft:   #5A655E;   /* Fließtext weich */
+
+  /* Akzentfarben */
+  --color-sage:        #A7C1B2;   /* Kopfzeile, Badges, Highlights */
+  --color-sage-dark:   #6F8B79;   /* Hover-Zustände, sekundäre Akzente */
+  --color-white:       #FFFFFF;   /* Text auf dunklem / salbeigrünem Hintergrund */
+  --color-sage-light:  #C8D3CC;   /* helle Sektionshintergründe (Ryska-Seite) */
+
+  /* Aliase für Lesbarkeit im Code */
+  --color-text:        var(--color-dark-green);
+  --color-border-soft: var(--color-muted);
+  --color-card:        var(--color-white);
+
+  /* Schriften */
+  --font-heading: 'Caudex', Georgia, serif;
+  --font-body:    'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Abstände */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 7rem;
+
+  /* Header */
+  --header-height: 64px;
+
+  /* Rundungen */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-pill: 999px;
+
+  /* Übergänge */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+
+/* --- 3. RESET & BASIS --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  padding-top: var(--header-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+/* --- 4. TYPOGRAFIE --- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-dark-green);
+}
+
+h1 { font-size: clamp(2rem,   5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.75rem); }
+
+p {
+  max-width: 65ch;
+}
+
+
+/* --- 5. LAYOUT-UTILITIES --- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+
+/* --- 6. HEADER --- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background-color: var(--color-sage);
+  border-bottom: none;
+  transition: transform var(--transition-base);
+}
+
+.site-header--hidden {
+  transform: translateY(-100%);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* Logo / Brand-Gruppe links */
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 20px);
+  text-decoration: none;
+  color: var(--color-dark-green);
+}
+
+/* Schwarzes PNG – kein Farbfilter, dunkel auf salbeigrünem Header */
+.site-logo__icon {
+  height: clamp(40px, 9vw, 100px);
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.site-logo__text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3.8vw, 50px);
+  font-weight: 400;
+  color: var(--color-dark-green);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .site-logo__text {
+    letter-spacing: -2px;
+  }
+}
+
+
+/* --- 7. NAVIGATION (Desktop) --- */
+
+.site-nav {
+  display: none;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21.5px;
+  color: var(--color-dark-green);
+  text-decoration: none;
+  letter-spacing: -0.36px;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.site-nav a:hover {
+  color: var(--color-sage-dark);
+}
+
+/* Aktive Seite: dezente Unterlinie in Dunkelgrün */
+.site-nav a[aria-current="page"] {
+  color: var(--color-dark-green);
+}
+
+.site-nav a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-dark-green);
+}
+
+/* Hamburger-Button (Mobile) */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark-green);
+  border-radius: var(--radius-sm);
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-dark-green);
+  border-radius: 2px;
+  transition:
+    transform var(--transition-base),
+    opacity   var(--transition-base);
+  transform-origin: center;
+}
+
+/* Hamburger → X Animation */
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile Navigation (ausklappbar) */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background-color: var(--color-sage-light);
+  border-bottom: 1px solid var(--color-muted);
+  z-index: 99;
+  padding-block: var(--space-xs);
+}
+
+.mobile-nav.is-open {
+  display: block;
+}
+
+.mobile-nav ul {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.mobile-nav li + li {
+  border-top: 1px solid var(--color-muted);
+}
+
+.mobile-nav a {
+  display: block;
+  padding-block: var(--space-sm);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-dark-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav a:hover,
+.mobile-nav a[aria-current="page"] {
+  color: var(--color-sage-dark);
+}
+
+
+/* --- 8. BUTTONS --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color var(--transition-fast),
+    color            var(--transition-fast),
+    box-shadow       var(--transition-fast);
+}
+
+.btn--primary {
+  background-color: var(--color-dark-green);
+  color: var(--color-cream);
+}
+
+.btn--primary:hover {
+  background-color: #1a2520;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-dark-green);
+  border: 1px solid var(--color-dark-green);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-dark-green);
+  color: var(--color-cream);
+}
+
+
+/* --- 9. FOOTER --- */
+
+.site-footer {
+  background-color: var(--color-cream);
+  border-top: 1px solid var(--color-muted);
+  padding-block: clamp(48px, 6vw, 90px);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* --- Obere Branding-Zeile: LoopLeaf links, Ryska rechts --- */
+
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(48px, 10vw, 160px);
+  margin-bottom: clamp(48px, 6vw, 80px);
+  flex-wrap: wrap;
+}
+
+.footer-brand-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 22px);
+}
+
+/* Logos: feste Maße aus Wix-Referenz, contain verhindert Beschneidung */
+.footer-brand-logo {
+  width: 82px;
+  height: 66px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Große Schriftzüge: Caudex, nah an Wix-Referenz 45px */
+.footer-brand-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 45px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  color: var(--color-dark-green);
+  white-space: nowrap;
+}
+
+/* --- Unterer Textblock --- */
+
+.footer-meta {
+  max-width: 760px;
+}
+
+/* „LoopLeaf" – kleines Heading: Montserrat Bold mit weitem Tracking */
+.footer-small-heading {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 2.7px;
+  color: var(--color-dark-green);
+  margin-bottom: 0.2rem;
+  max-width: none;
+}
+
+/* „Ein Projekt von Ryska Productions." */
+.footer-subline {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 2.7px;
+  color: var(--color-dark-green);
+  margin-bottom: var(--space-md);
+  max-width: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.footer-nav a {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-dark-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: var(--color-sage-dark);
+  text-decoration: underline;
+}
+
+.footer-divider {
+  color: var(--color-muted);
+  user-select: none;
+}
+
+.footer-note {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+  max-width: 60ch;
+}
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .footer-brand-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-brand-title {
+    font-size: clamp(1.5rem, 8vw, 38px);
+    letter-spacing: -1px;
+  }
+
+  .footer-brand-logo {
+    width: 68px;
+    height: auto;
+  }
+}
+
+
+/* --- 10. RESPONSIVE --- */
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 117px;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/* --- 11. REDUCED MOTION --- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .site-header,
+  .nav-toggle-bar,
+  .site-nav a,
+  .mobile-nav a,
+  .btn,
+  .footer-nav a {
+    transition: none;
+  }
+}
+
+
+/* --- 12. FOKUS-STILE (Barrierearmut) --- */
+
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+
+/* ================================================================
+   STARTSEITE
+   ================================================================ */
+
+
+/* --- HERO --- */
+
+.hero {
+  background-color: var(--color-cream);
+  padding-top: var(--space-xl);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-sage);
+  color: var(--color-dark-green);
+  padding: 0.35rem 1.1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 7vw, 100px);
+  line-height: 1.1;
+  letter-spacing: clamp(-5px, -0.35vw, -1px);
+  max-width: 16ch;
+  margin-bottom: var(--space-md);
+}
+
+.hero-intro {
+  font-size: clamp(1rem, 1.8vw, 24px);
+  color: var(--color-dark-green);
+  max-width: 44ch;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Bild außerhalb des Containers – nutzt volle Viewport-Breite */
+.hero-media {
+  margin-top: var(--space-md);
+}
+
+/* Kein object-fit: cover → keine seitliche Beschneidung */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: -5px;
+  }
+}
+
+
+/* --- ZIELGRUPPEN-ABSCHNITT --- */
+
+.target-section {
+  background-color: var(--color-sage); /* #A7C1B2 */
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+
+.target-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.8vw, 49px);
+  font-weight: 400;
+  color: var(--color-dark-green);
+  letter-spacing: -1.96px;
+  line-height: 1.1;
+  max-width: 22ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.target-section p {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 3vw, 40px);
+  font-weight: 400;
+  color: var(--color-cream);
+  letter-spacing: -1.6px;
+  line-height: 1.1;
+  max-width: 28ch;
+  margin-inline: auto;
+}
+
+.target-section p + p {
+  margin-top: var(--space-sm);
+}
+
+
+/* --- SOFA-BILD --- */
+
+.sofa-image-section {
+  overflow: hidden;
+}
+
+.sofa-image-section img {
+  width: 100%;
+  height: clamp(280px, 45vw, 580px);
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* --- FEATURES: Einleitung --- */
+
+.features-section {
+  background-color: var(--color-dark-green);
+  padding-block: var(--space-2xl);
+}
+
+.features-intro {
+  margin-bottom: var(--space-xl);
+}
+
+.features-intro h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: clamp(-4px, -0.3vw, -1px);
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+}
+
+.features-subline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.8vw, 40px);
+  font-weight: 400;
+  letter-spacing: -1.6px;
+  line-height: 1.1;
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+}
+
+.features-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.8vw, 25px);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: rgba(247, 244, 236, 0.8);
+  max-width: 55ch;
+}
+
+/* Trennlinie oben über erstem Feature */
+.features-list {
+  border-top: 1px solid rgba(247, 244, 236, 0.2);
+}
+
+
+/* --- FEATURES: Reihen – Mobile --- */
+
+/* Auf Mobile: Zahl oben, Content darunter, Bild ganz unten */
+.feature-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  padding-block: var(--space-lg);
+  border-bottom: 1px solid rgba(247, 244, 236, 0.2);
+}
+
+.feature-number {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-cream);
+  letter-spacing: -0.36px;
+  line-height: 1.2;
+}
+
+.feature-item h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 80px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: clamp(-4px, -0.28vw, -1px);
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-content p {
+  color: rgba(247, 244, 236, 0.85);
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.5vw, 21px);
+  font-weight: 300;
+  letter-spacing: -0.42px;
+  line-height: 1.2;
+}
+
+.feature-content p + p {
+  margin-top: var(--space-sm);
+}
+
+/* Mobile: Bild am Ende der Reihe, natürliche Proportionen */
+.feature-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+
+/* --- FEATURES: Reihen – Tablet (768px) ---
+   Drei Spalten: [Zahl | Content | Bild]
+   Zahl sitzt links neben der Überschrift, nicht darüber */
+
+@media (min-width: 768px) {
+  .feature-item {
+    display: grid;
+    grid-template-columns: 40px 1fr 220px;
+    column-gap: var(--space-lg);
+    row-gap: 0;
+    padding-block: var(--space-lg);
+    align-items: start;
+  }
+
+  .feature-number {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .feature-content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Bild streckt sich auf volle Reihenhöhe.
+     padding-block: 8px erzeugt symmetrischen Abstand zu den Trennlinien.
+     object-fit: contain verhindert horizontale Beschneidung. */
+  .feature-image {
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding-block: 8px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--radius-sm);
+  }
+}
+
+
+/* --- FEATURES: Reihen – Desktop (1024px) --- */
+
+@media (min-width: 1024px) {
+  .feature-item {
+    grid-template-columns: 56px 1fr 240px;
+    column-gap: var(--space-xl);
+  }
+
+  .feature-number {
+    padding-top: 14px;
+  }
+
+  .feature-item h3 {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -4px;
+  }
+
+  .feature-content p {
+    font-size: 21px;
+    line-height: 25.2px;
+    letter-spacing: -0.42px;
+  }
+}
+
+
+/* ================================================================
+   SCROLL-EINBLENDANIMATION – Feature-Bilder
+   Progressive Enhancement: greift nur wenn html.js-enabled gesetzt.
+   Ohne JS bleiben Bilder voll sichtbar.
+   ================================================================ */
+
+.js-enabled .feature-image {
+  opacity: 0.18;
+  filter: brightness(0.55);
+  transform: translateY(12px);
+  transition:
+    opacity  900ms ease,
+    filter   900ms ease,
+    transform 900ms ease;
+  will-change: opacity, filter, transform;
+}
+
+.js-enabled .feature-image.is-visible {
+  opacity: 1;
+  filter: brightness(1);
+  transform: translateY(0);
+}
+
+/* Kein Transform bei reduziertem Bewegungsmodus, nur dezentes Fade */
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled .feature-image {
+    transform: none;
+    filter: none;
+    transition: opacity 500ms ease;
+  }
+
+  .js-enabled .feature-image.is-visible {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+
+/* ================================================================
+   RYSKA-SEITE  (ryska.html)
+   Nutzt das globale Designsystem: Farben, Schriften, .container,
+   .btn, .btn--primary aus den Abschnitten oben.
+   ================================================================ */
+
+
+/* --- Intro-Abschnitt --- */
+
+.ryska-intro {
+  padding-block: clamp(48px, 7vw, 96px);
+  background-color: var(--color-cream);
+  text-align: center;
+}
+
+.ryska-intro .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ryska-intro-logo {
+  width: clamp(112px, 16vw, 160px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+.ryska-label {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 400;
+  color: #26352F;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.ryska-intro h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: var(--color-dark-green);
+  margin-bottom: 16px;
+}
+
+.ryska-intro-sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 20px);
+  font-weight: 300;
+  color: var(--color-dark-green);
+  margin-bottom: 16px;
+}
+
+.ryska-intro-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.4vw, 17px);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text-soft);
+  max-width: 520px;
+  text-align: center;
+}
+
+
+/* ================================================================
+   KACHELSTRUKTUR – Abwechselndes Bild/Text-Grid
+   ================================================================ */
+
+.about-grid {
+  width: 100%;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 550px;
+}
+
+/* Bildkacheln */
+.about-image {
+  overflow: hidden;
+  min-height: 550px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.about-image--portrait img {
+  object-position: center top;
+}
+
+/* Textkacheln */
+.about-text-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(32px, 5vw, 72px);
+  min-height: 550px;
+}
+
+.about-text-card--sage  { background-color: var(--color-sage); }
+.about-text-card--cream { background-color: var(--color-cream); }
+
+.about-text-inner {
+  max-width: 380px;
+  text-align: center;
+}
+
+/* Logos in Textkacheln */
+.about-card-logo {
+  width: clamp(80px, 10vw, 143px);
+  height: clamp(80px, 10vw, 143px);
+  object-fit: contain;
+  display: block;
+  margin: 0 auto clamp(16px, 2vw, 28px);
+}
+
+/* Überschriften in Textkacheln */
+.about-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 38px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.9px;
+  color: var(--color-dark-green);
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+/* Fließtext in Textkacheln */
+.about-card-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.3vw, 18px);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.36px;
+  color: var(--color-dark-green);
+  margin-bottom: 14px;
+}
+
+.about-card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Werte-Unterpunkte (Was mir wichtig ist) */
+.about-card-values {
+  margin-top: 8px;
+}
+
+.about-card-value-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.4vw, 20px);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--color-dark-green);
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.about-card-value-title:first-child {
+  margin-top: 0;
+}
+
+/* Feedback-Button in Kachel */
+.about-card-btn {
+  margin-top: clamp(20px, 2.5vw, 32px);
+  display: inline-block;
+}
+
+
+/* ================================================================
+   RESPONSIVE – Ryska Kachelstruktur
+   ================================================================ */
+
+@media (max-width: 768px) {
+
+  /* Zeilen auf Flex umschalten, damit order greift */
+  .about-row {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* Bild immer zuerst, unabhängig von der DOM-Reihenfolge */
+  .about-row .about-image {
+    order: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-height: auto;
+  }
+
+  .about-row .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* Hundeportrait: Kopf oben halten */
+  .about-row .about-image--portrait img {
+    object-position: center top;
+  }
+
+  /* Textkachel immer nach dem Bild */
+  .about-row .about-text-card {
+    order: 2;
+    min-height: auto;
+    padding: clamp(40px, 10vw, 64px) clamp(24px, 7vw, 40px);
+  }
+
+  .about-card-logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .about-card-title {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .about-card-text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ryska-intro h1 {
+    letter-spacing: -3px;
+  }
+}
+
+
+/* ================================================================
+   DATENSCHUTZSEITE  (datenschutz.html)
+   ================================================================ */
+
+.privacy-page {
+  background-color: var(--color-cream);
+  color: var(--color-dark-green);
+}
+
+.privacy-content {
+  max-width: 860px;
+  margin-inline: auto;
+  padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 48px);
+}
+
+/* H1 – Seitenüberschrift */
+.privacy-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 7vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-dark-green);
+  margin-bottom: clamp(8px, 1.5vw, 16px);
+  overflow-wrap: break-word;
+}
+
+/* Datumszeile */
+.privacy-stand {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-text-soft);
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+/* H2 – nummerierte Hauptabschnitte */
+.privacy-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-dark-green);
+  margin-top: clamp(48px, 6vw, 80px);
+  margin-bottom: clamp(12px, 1.5vw, 20px);
+  padding-top: clamp(24px, 3vw, 40px);
+  border-top: 1px solid var(--color-muted);
+}
+
+/* H3 – Unterabschnitte */
+.privacy-content h3 {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-dark-green);
+  margin-top: clamp(28px, 3.5vw, 44px);
+  margin-bottom: clamp(8px, 1vw, 14px);
+}
+
+/* H4 – Unter-Unterabschnitte */
+.privacy-content h4 {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 600;
+  color: var(--color-dark-green);
+  margin-top: clamp(20px, 2.5vw, 32px);
+  margin-bottom: clamp(6px, 0.8vw, 10px);
+}
+
+/* Fließtext */
+.privacy-content p {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 17px);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-dark-green);
+  margin-bottom: clamp(12px, 1.5vw, 18px);
+}
+
+/* Listen */
+.privacy-content ul {
+  padding-left: clamp(20px, 3vw, 32px);
+  margin-bottom: clamp(12px, 1.5vw, 18px);
+  list-style: disc;
+}
+
+.privacy-content li {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 17px);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-dark-green);
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+/* Links */
+.privacy-content a {
+  color: var(--color-dark-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.privacy-content a:hover {
+  color: var(--color-sage-dark);
+}
+
+.privacy-content a:focus-visible {
+  outline: 2px solid var(--color-dark-green);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Adressblock (verantwortliche Stelle) */
+.privacy-address {
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 17px);
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--color-dark-green);
+  background-color: #eeeae0;
+  border-left: 3px solid var(--color-sage-dark);
+  padding: clamp(16px, 2.5vw, 24px) clamp(20px, 3vw, 32px);
+  margin-block: clamp(12px, 1.5vw, 18px);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Quellenangabe am Ende */
+.privacy-source {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding-top: clamp(20px, 2.5vw, 32px);
+  border-top: 1px solid var(--color-muted);
+  font-size: 14px !important;
+  color: var(--color-text-soft) !important;
+}
+
+
+/* ================================================================
+   RESPONSIVE – Datenschutzseite
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .privacy-content h2 {
+    margin-top: clamp(36px, 8vw, 56px);
+  }
+
+  .privacy-content h3 {
+    margin-top: clamp(20px, 5vw, 32px);
+  }
+}

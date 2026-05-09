@@ -1,0 +1,38 @@
+{
+  "project": "LoopLeaf Website",
+  "brand": "Ryska Productions",
+  "contactEmail": "ryskaproductions@gmail.com",
+  "externalImpressum": "https://mein.online-impressum.de/ryska-productions/",
+  "contentInventoryVersion": "updated-from-pdf-screenshots-and-copied-text",
+  "colors": {
+    "cream": "#F7F4EC",
+    "sage": "#A7C1B2",
+    "darkGreen": "#26352F",
+    "text": "#1F2523",
+    "textSoft": "#5F6862",
+    "borderSoft": "#E2E1DD"
+  },
+  "fonts": {
+    "headings": "Caudex",
+    "body": "Montserrat Light / 300, Montserrat, system-ui, sans-serif"
+  },
+  "pages": [
+    "index.html",
+    "ryska.html",
+    "datenschutz.html"
+  ],
+  "externalLinks": {
+    "impressum": "https://mein.online-impressum.de/ryska-productions/",
+    "contactMailto": "mailto:ryskaproductions@gmail.com"
+  },
+  "headerBehavior": {
+    "hideOnScrollDown": true,
+    "showOnScrollUp": true,
+    "visibleAtTop": true,
+    "keepVisibleWhenMobileMenuOpen": true,
+    "respectPrefersReducedMotion": true
+  },
+  "cookieConsent": {
+    "status": "not required – no consent-requiring cookies, tracking, analytics or marketing services in use"
+  }
+}
