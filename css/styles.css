@@ -725,6 +725,13 @@ p {
   margin-top: var(--space-sm);
 }
 
+@media (max-width: 768px) {
+  .target-section p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}
+
 
 /* --- SOFA-BILD --- */
 
