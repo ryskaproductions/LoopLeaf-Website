@@ -50,7 +50,7 @@ Datenschutz · Impressum · Kontakt ·
 Hinweistext:
 
 ```text
-Das Impressum wird über unseren Impressumsservice bereitgestellt. Diese Website enthält externe Links, insbesondere zum Apple App Store. Für Inhalte externer Seiten sind die jeweiligen Anbieter verantwortlich.
+Das Impressum wird über unseren Impressumsservice bereitgestellt. Diese Website enthält externe Links, insbesondere zum Apple App Store und zum Google Play Store. Für Inhalte externer Seiten sind die jeweiligen Anbieter verantwortlich.
 ```
 
 Copyright:
@@ -457,7 +457,7 @@ Aktuelles Projekt – LoopLeaf
 Text:
 
 ```text
-LoopLeaf 🌿 ist eine iOS-App, die dabei hilft, persönliche Kontakte sanft und ohne Druck im Blick zu behalten. Die App richtet sich an Menschen, die soziale Verbindungen pflegen möchten, ohne sich dabei von starren Erinnerungen oder schlechtem Gewissen stressen zu lassen.
+LoopLeaf 🌿 ist eine iOS- und Android-App, die dabei hilft, persönliche Kontakte sanft und ohne Druck im Blick zu behalten. Die App richtet sich an Menschen, die soziale Verbindungen pflegen möchten, ohne sich dabei von starren Erinnerungen oder schlechtem Gewissen stressen zu lassen.
 ```
 
 ### Kachel / Bild 2
@@ -597,7 +597,19 @@ Feedback
 
 ## Datenschutz
 
-Die endgültigen Texte sollen aus der bereitgestellten Word-Datei übernommen werden.
+Die endgültigen Texte wurden aus der bereitgestellten Word-Datei übernommen.
+
+Aktuelle Quelldatei: `Datenschutzerklaerung_LoopLeaf_Vercel_final_mit_Android.docx`
+
+Seitenstruktur (Abschnitte):
+- 1. Datenschutz auf einen Blick
+- 2. Hosting (Vercel)
+- 3. Allgemeine Hinweise und Pflichtinformationen
+- 4. Datenerfassung auf dieser Website
+  - Quelle Abschnitte 1–4: eRecht24
+  - Eigener Hinweis: Keine Cookies, keine Analyse-Tools und kein Tracking
+- 5. Externer Impressumslink und zweiter Kontaktweg
+- 6. Datenschutz in den mobilen Apps „LoopLeaf" (iOS **und Android**)
 
 Wichtig:
 
