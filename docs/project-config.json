@@ -34,5 +34,12 @@
   },
   "cookieConsent": {
     "status": "not required – no consent-requiring cookies, tracking, analytics or marketing services in use"
+  },
+  "siteUrl": "https://www.loopleaf.app",
+  "openGraph": {
+    "image": "assets/images/OG-Bild-LoopLeaf-1200x630-komp.jpg",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "status": "Meta-Tags in allen drei HTML-Seiten integriert – finale Domain https://www.loopleaf.app gesetzt"
   }
 }
