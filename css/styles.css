@@ -184,6 +184,16 @@ p {
   padding-block: var(--space-xl);
 }
 
+/* Zeilenumbruch nur auf Mobile sichtbar */
+.mobile-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-br {
+    display: block;
+  }
+}
+
 
 /* --- 6. HEADER --- */
 
