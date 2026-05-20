@@ -62,7 +62,7 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 
 ## Social Preview / Open Graph
 
-- [x] Finale live-URL `https://www.loopleaf.app` in allen drei HTML-Dateien als `og:url` + Bildpfad eingetragen
+- [x] Finale live-URL `https://www.loopleaf.de` in allen drei HTML-Dateien als `og:url` + Bildpfad eingetragen
 - [ ] OG-Bild `OG-Bild-LoopLeaf-1200x630-komp.jpg` ist unter `assets/images/` vorhanden
 - [ ] Linkvorschau in WhatsApp, iMessage oder Discord testen (z. B. über https://opengraph.xyz)
 - [ ] Startseite zeigt korrektes Vorschaubild und Titel
