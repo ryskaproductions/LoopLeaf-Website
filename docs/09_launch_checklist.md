@@ -69,10 +69,13 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 ## Social Preview / Open Graph
 
 - [x] Finale live-URL `https://www.loopleaf.de` in allen drei HTML-Dateien als `og:url` + Bildpfad eingetragen
-- [ ] OG-Bild `OG-Bild-LoopLeaf-1200x630-komp.jpg` ist unter `assets/images/` vorhanden
-- [ ] Linkvorschau in WhatsApp, iMessage oder Discord testen (z. B. über https://opengraph.xyz)
-- [ ] Startseite zeigt korrektes Vorschaubild und Titel
+- [x] OG-Bild `OG-Bild-LoopLeaf-1200x630-komp.jpg` ist unter `assets/images/` vorhanden (1200×630 px, JPG, ~150 KB)
+- [x] OG-Bild unter `https://www.loopleaf.de/assets/images/OG-Bild-LoopLeaf-1200x630-komp.jpg` live erreichbar (HTTP 200, `image/jpeg`)
+- [x] WhatsApp-Linkvorschau erfolgreich getestet – Vorschaubild und Titel werden korrekt angezeigt
+- [ ] iMessage oder Discord testen (optional, WhatsApp-Test gilt als Hauptnachweis)
 - [ ] Favicon und Apple-Touch-Icon werden korrekt angezeigt
+
+**Hinweis OpenGraph.xyz:** Das Tool zeigt ggf. weiterhin einen Fehler an. Technische Analyse (curl, alle User-Agents) hat keine Ursache auf Serverseite ergeben – HTTP 200, korrekte Meta-Tags, kein Bot-Blocking, valides SSL. Ursache ist sehr wahrscheinlich ein gecachtes Fehlerergebnis oder ein infrastrukturelles Problem von OpenGraph.xyz selbst. WhatsApp-Test und curl-Prüfung gelten als zuverlässigere Nachweise.
 
 ## Rechtliches
 

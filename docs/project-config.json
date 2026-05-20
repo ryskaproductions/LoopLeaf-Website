@@ -36,10 +36,22 @@
     "status": "not required – no consent-requiring cookies, tracking, analytics or marketing services in use"
   },
   "siteUrl": "https://www.loopleaf.de",
+  "deployment": {
+    "platform": "Vercel",
+    "status": "live",
+    "primaryDomain": "https://www.loopleaf.de",
+    "nonWwwRedirect": "loopleaf.de → https://www.loopleaf.de (307, vercel.json mit permanent:true hinterlegt)",
+    "redirectNote": "307 ist nicht kritisch für Linkvorschauen – diese testen direkt die www-Domain"
+  },
   "openGraph": {
     "image": "assets/images/OG-Bild-LoopLeaf-1200x630-komp.jpg",
     "imageWidth": 1200,
     "imageHeight": 630,
-    "status": "Meta-Tags in allen drei HTML-Seiten integriert – finale Domain https://www.loopleaf.de gesetzt"
+    "imageFormat": "JPG",
+    "imageSizeKB": 150,
+    "liveImageUrl": "https://www.loopleaf.de/assets/images/OG-Bild-LoopLeaf-1200x630-komp.jpg",
+    "status": "live und funktional – Meta-Tags in allen drei HTML-Seiten korrekt, finale Domain https://www.loopleaf.de gesetzt",
+    "whatsappPreviewTest": "erfolgreich",
+    "opengraphXyzNote": "zeigt ggf. Fehler – technische Analyse unauffällig (HTTP 200, kein Bot-Blocking, valides SSL); wahrscheinlich gecachtes Fehlerergebnis des Tools"
   }
 }
