@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "loopleaf.de"
+        }
+      ],
+      "destination": "https://www.loopleaf.de/:path*",
+      "permanent": true
+    }
+  ]
+}

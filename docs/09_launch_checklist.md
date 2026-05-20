@@ -1,5 +1,11 @@
 # 09 – Launch Checklist
 
+## Domain & Redirects
+
+- [x] `vercel.json` angelegt mit permanentem Redirect: `loopleaf.de/*` → `https://www.loopleaf.de/*` (308 permanent)
+- [ ] Redirect nach Deployment verifizieren: `curl -sI https://loopleaf.de/` zeigt `HTTP/2 308` und `location: https://www.loopleaf.de/`
+- [ ] Pfade bleiben erhalten (z. B. `/datenschutz.html` → `https://www.loopleaf.de/datenschutz.html`)
+
 ## Technische Prüfung
 
 - [ ] Website startet lokal
