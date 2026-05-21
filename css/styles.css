@@ -1668,7 +1668,19 @@ p {
   margin-top: var(--space-sm);
 }
 
-/* --- Abschluss (Cream) --- */
+/* --- Übergangs-Bild (Individual → Closing) --- */
+.warum-transition-image {
+  overflow: hidden;
+}
+
+.warum-transition-image img {
+  width: 100%;
+  height: clamp(300px, 50vw, 640px);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Abschluss (Dark Green) --- */
 .warum-closing {
   background-color: var(--color-dark-green);
   padding-block: var(--space-2xl);

@@ -133,7 +133,8 @@ Abschnitte (Farb-Abfolge):
 3. `.warum-recognition` — Dark Green: Überschrift mit Linien links/rechts + 10 Blockquote-Statements (alternierend links/rechts ab 768px)
 4. `.warum-neuro` — Cream: H2 „Nicht jeder Kopf fühlt gleich." + 5 Absätze
 5. `.warum-individual` — Sage: H2 „Nicht jeder pflegt Beziehungen…" + Text + 2×2-Moments-Grid + Textideen-Note
-6. `.warum-closing` — Dark Green: zentrierter Abschlusstext, eingerahmt von feinen Cream-Linien oben und unten
+6. `.warum-transition-image` — Übergangs-Bild: `Emotional-scene- connection-with-distance.png`, vollbreit, `object-fit: cover`, `clamp(300px, 50vw, 640px)` Höhe
+7. `.warum-closing` — Dark Green: zentrierter Abschlusstext, eingerahmt von feinen Cream-Linien oben und unten
 
 CSS: Eigener Abschnitt `/* WARUM-SEITE */` am Ende von `css/styles.css`.
 Responsive: Desktop- und Mobile-Navigation beide aktualisiert (`aria-current="page"` auf warum.html gesetzt).
