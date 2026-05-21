@@ -69,21 +69,25 @@ Hinweis für die programmierte Website:
 
 ### Navigation
 
-Desktop-Navigation nach Screenshot:
+Desktop-Navigation (finaler Stand):
 
 ```text
-LoopLeaf
+Startseite
+Warum LoopLeaf?
 Über Ryska Productions
 ```
 
-Empfohlene technische Links:
+Mobile-Nav enthält zusätzlich: Datenschutz · Impressum · Kontakt
+
+Technische Links:
 
 ```text
-LoopLeaf → index.html
+Startseite        → index.html
+Warum LoopLeaf?   → warum.html
 Über Ryska Productions → ryska.html
-Datenschutz → datenschutz.html
-Impressum → https://mein.online-impressum.de/ryska-productions/
-Kontakt → mailto:ryskaproductions@gmail.com
+Datenschutz       → datenschutz.html
+Impressum         → https://mein.online-impressum.de/ryska-productions/
+Kontakt           → mailto:ryskaproductions@gmail.com
 ```
 
 ### Hero-Bereich

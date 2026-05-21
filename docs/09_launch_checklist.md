@@ -21,6 +21,7 @@
 ## Seitenprüfung
 
 - [ ] Startseite funktioniert
+- [ ] Warum-LoopLeaf-Seite funktioniert
 - [ ] Ryska-Seite funktioniert
 - [ ] Datenschutzseite funktioniert
 - [ ] Impressumslink funktioniert extern

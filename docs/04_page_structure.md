@@ -5,6 +5,7 @@
 ```text
 /
 ├── index.html
+├── warum.html
 ├── ryska.html
 ├── datenschutz.html
 ├── css/
@@ -77,24 +78,25 @@ JavaScript erkennt Scrollrichtung und setzt z. B. die Klasse:
 
 ## Navigation
 
-Empfohlene Links:
+Desktop- und Mobile-Navigation (finaler Stand):
 
 ```text
-LoopLeaf
-Ryska Productions
-Datenschutz
-Impressum
-Kontakt
+Startseite
+Warum LoopLeaf?
+Über Ryska Productions
 ```
+
+Mobile-Nav enthält zusätzlich: Datenschutz · Impressum · Kontakt
 
 Technische Zielpfade:
 
 ```text
-LoopLeaf → index.html
-Ryska Productions → ryska.html
-Datenschutz → datenschutz.html
-Impressum → https://mein.online-impressum.de/ryska-productions/
-Kontakt → mailto:ryskaproductions@gmail.com
+Startseite        → index.html
+Warum LoopLeaf?   → warum.html
+Über Ryska Productions → ryska.html
+Datenschutz       → datenschutz.html
+Impressum         → https://mein.online-impressum.de/ryska-productions/
+Kontakt           → mailto:ryskaproductions@gmail.com
 ```
 
 ## Startseite: index.html
@@ -115,6 +117,26 @@ Feature-Reihen-Layout Desktop: `grid-template-columns: 56px 1fr 240px` (Zahl | C
 Footer-Struktur:
 - Obere Zeile: `.footer-brand-row` mit zwei `.footer-brand-item`-Gruppen
 - Unterer Block: `.footer-meta` mit `.footer-small-heading`, `.footer-subline`, `.footer-nav`, `.footer-note`, `.footer-copyright`
+
+## Warum-Seite: warum.html
+
+Status: finalisiert.
+
+OG/Twitter: `og:url` = `https://www.loopleaf.de/warum.html`, gemeinsames OG-Bild.
+
+Hero-Bild: `assets/images/platzhalter-warum-ist-LoopLeaf-entstanden.PNG`
+
+Abschnitte (Farb-Abfolge):
+
+1. `.warum-hero` — Cream: Logo + Label „Die Idee hinter LoopLeaf" + H1 + 4 Statement-Zeilen (Montserrat Light) + Bild
+2. `.warum-personal` — Sage: H2-Tagline „Kontakte bedeuten nicht weniger…" + Lead + Fließtext (persönliche Geschichte)
+3. `.warum-recognition` — Dark Green: Überschrift mit Linien links/rechts + 10 Blockquote-Statements (alternierend links/rechts ab 768px)
+4. `.warum-neuro` — Cream: H2 „Nicht jeder Kopf fühlt gleich." + 5 Absätze
+5. `.warum-individual` — Sage: H2 „Nicht jeder pflegt Beziehungen…" + Text + 2×2-Moments-Grid + Textideen-Note
+6. `.warum-closing` — Dark Green: zentrierter Abschlusstext, eingerahmt von feinen Cream-Linien oben und unten
+
+CSS: Eigener Abschnitt `/* WARUM-SEITE */` am Ende von `css/styles.css`.
+Responsive: Desktop- und Mobile-Navigation beide aktualisiert (`aria-current="page"` auf warum.html gesetzt).
 
 ## Ryska-Seite: ryska.html
 

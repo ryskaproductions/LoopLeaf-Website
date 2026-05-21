@@ -1358,3 +1358,326 @@ p {
     margin-top: clamp(20px, 5vw, 32px);
   }
 }
+
+
+/* ================================================================
+   WARUM-SEITE  (warum.html)
+   ================================================================ */
+
+/* --- Hero (Cream) --- */
+.warum-hero {
+  background-color: var(--color-cream);
+  padding-top: var(--space-xl);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.warum-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.warum-hero-logo {
+  width: clamp(96px, 13vw, 136px);
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.warum-hero-label {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-dark-green);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.warum-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 72px);
+  letter-spacing: -2px;
+  max-width: 20ch;
+  margin-bottom: var(--space-lg);
+  margin-inline: auto;
+}
+
+.warum-for-lines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.warum-for-lines p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 20px);
+  font-weight: 300;
+  color: var(--color-dark-green);
+  max-width: 42ch;
+  margin-inline: auto;
+}
+
+.warum-hero-media {
+  margin-top: var(--space-lg);
+}
+
+.warum-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.warum-hero-tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.8vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: clamp(-2px, -0.15vw, -0.5px);
+  color: var(--color-dark-green);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .warum-hero {
+    padding-top: var(--space-2xl);
+  }
+}
+
+/* --- Persönlicher Einstieg (Sage) --- */
+.warum-personal {
+  background-color: var(--color-sage);
+  padding-block: var(--space-2xl);
+}
+
+.warum-personal-inner {
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+.warum-personal-lead {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: clamp(-1.5px, -0.1vw, -0.5px);
+  color: var(--color-dark-green);
+  margin-bottom: var(--space-lg);
+  max-width: 32ch;
+}
+
+.warum-personal p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.6vw, 20px);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-dark-green);
+  max-width: 60ch;
+  margin-bottom: var(--space-sm);
+}
+
+.warum-personal p:last-child {
+  margin-bottom: 0;
+}
+
+.warum-personal-emphasis {
+  margin-top: var(--space-lg);
+  max-width: 36ch;
+}
+
+/* --- Wiedererkennung (Dark Green) --- */
+.warum-recognition {
+  background-color: var(--color-dark-green);
+  padding-block: var(--space-2xl);
+}
+
+.warum-recognition-intro {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: rgba(247, 244, 236, 0.88);
+  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.warum-recognition-intro::before,
+.warum-recognition-intro::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: rgba(247, 244, 236, 0.25);
+}
+
+.warum-statements {
+  border-top: 1px solid rgba(247, 244, 236, 0.15);
+}
+
+.warum-statement {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: clamp(-1px, -0.06vw, -0.3px);
+  color: var(--color-cream);
+  border: none;
+  margin: 0;
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid rgba(247, 244, 236, 0.15);
+  max-width: 46ch;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .warum-statement:nth-child(even) {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+/* --- Neurodiversität (Cream) --- */
+.warum-neuro {
+  background-color: var(--color-cream);
+  padding-block: var(--space-2xl);
+}
+
+.warum-neuro-inner {
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+.warum-neuro h2 {
+  font-size: clamp(1.8rem, 3.8vw, 52px);
+  line-height: 1.1;
+  letter-spacing: clamp(-2px, -0.15vw, -0.5px);
+  margin-bottom: var(--space-lg);
+}
+
+.warum-neuro p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.6vw, 19px);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-dark-green);
+  max-width: 62ch;
+  margin-bottom: var(--space-sm);
+}
+
+.warum-neuro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Individualisierung (Sage) --- */
+.warum-individual {
+  background-color: var(--color-sage);
+  padding-block: var(--space-2xl);
+}
+
+.warum-individual-inner {
+  max-width: 64ch;
+  margin-inline: auto;
+}
+
+.warum-individual h2 {
+  font-size: clamp(1.8rem, 3.8vw, 52px);
+  line-height: 1.1;
+  letter-spacing: clamp(-2px, -0.15vw, -0.5px);
+  margin-bottom: var(--space-lg);
+}
+
+.warum-individual p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.6vw, 19px);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-dark-green);
+  max-width: 62ch;
+  margin-bottom: var(--space-sm);
+}
+
+.warum-individual p:last-child {
+  margin-bottom: 0;
+}
+
+.warum-moments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border-top: 1px solid rgba(38, 53, 47, 0.18);
+}
+
+.warum-moment {
+  padding: var(--space-lg) var(--space-md) var(--space-lg) 0;
+  border-bottom: 1px solid rgba(38, 53, 47, 0.18);
+}
+
+.warum-moment:nth-child(even) {
+  padding-left: var(--space-md);
+  padding-right: 0;
+  border-left: 1px solid rgba(38, 53, 47, 0.18);
+}
+
+.warum-moment-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 24px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  color: var(--color-dark-green);
+  max-width: 26ch;
+  margin-bottom: 0;
+}
+
+.warum-textideen-note {
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .warum-moments {
+    grid-template-columns: 1fr;
+  }
+
+  .warum-moment:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+/* --- Abschluss (Cream) --- */
+.warum-closing {
+  background-color: var(--color-dark-green);
+  padding-block: var(--space-2xl);
+}
+
+.warum-closing-inner {
+  max-width: 44ch;
+  margin-inline: auto;
+  text-align: center;
+  border-top: 1px solid rgba(247, 244, 236, 0.2);
+  border-bottom: 1px solid rgba(247, 244, 236, 0.2);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.warum-closing-inner p {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 30px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+  color: var(--color-cream);
+  margin-bottom: var(--space-lg);
+  max-width: 44ch;
+}
+
+.warum-closing-inner p:last-child {
+  margin-bottom: 0;
+}

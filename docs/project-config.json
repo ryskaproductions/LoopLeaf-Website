@@ -18,6 +18,7 @@
   },
   "pages": [
     "index.html",
+    "warum.html",
     "ryska.html",
     "datenschutz.html"
   ],
@@ -50,7 +51,7 @@
     "imageFormat": "JPG",
     "imageSizeKB": 150,
     "liveImageUrl": "https://www.loopleaf.de/assets/images/OG-Bild-LoopLeaf-1200x630-komp.jpg",
-    "status": "live und funktional – Meta-Tags in allen drei HTML-Seiten korrekt, finale Domain https://www.loopleaf.de gesetzt",
+    "status": "live und funktional – Meta-Tags in allen vier HTML-Seiten korrekt (index, warum, ryska, datenschutz), finale Domain https://www.loopleaf.de gesetzt",
     "whatsappPreviewTest": "erfolgreich",
     "opengraphXyzNote": "zeigt ggf. Fehler – technische Analyse unauffällig (HTTP 200, kein Bot-Blocking, valides SSL); wahrscheinlich gecachtes Fehlerergebnis des Tools"
   }
