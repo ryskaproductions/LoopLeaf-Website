@@ -1494,15 +1494,18 @@ p {
 
 .warum-recognition-intro {
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 2.5vw, 32px);
-  font-weight: 400;
+  /* +2px vs. vorherigem clamp, sichtbar kräftiger via font-weight 700 */
+  font-size: clamp(1.45rem, 2.7vw, 34px);
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1px;
-  color: rgba(247, 244, 236, 0.88);
+  color: rgba(247, 244, 236, 0.95);
   margin-bottom: var(--space-xl);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md);
+  text-align: center;
 }
 
 .warum-recognition-intro::before,
@@ -1511,6 +1514,19 @@ p {
   flex: 1;
   height: 1px;
   background-color: rgba(247, 244, 236, 0.25);
+}
+
+@media (max-width: 768px) {
+  /*
+    Auf schmalen Bildschirmen sind die seitlichen Linien optisch kaum
+    erkennbar — sie würden eher Rauschen erzeugen als ruhig wirken.
+    Wir blenden sie aus und lassen die Überschrift dort sauber zentriert
+    in voller Stärke wirken (gleicher 2-px-Schub + Gewicht wie Desktop).
+  */
+  .warum-recognition-intro::before,
+  .warum-recognition-intro::after {
+    display: none;
+  }
 }
 
 .warum-statements {
@@ -1603,24 +1619,35 @@ p {
   margin-bottom: 0;
 }
 
+/*
+  Ruhige vertikale Linienliste (ehemals 2×2-Grid). Die vier Aussagen
+  stehen untereinander, durch feine horizontale Linien getrennt.
+  `max-width` ist bewusst etwas breiter als die längste Aussage
+  („Dein eigenes Tempo. Dein eigener Rhythmus.") gewählt, sodass alle
+  Linien gleich lang sind und einen Hauch über die Texte hinausragen.
+*/
 .warum-moments {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  display: block;
+  max-width: 44ch;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
+  margin-inline: auto;
   border-top: 1px solid rgba(38, 53, 47, 0.18);
 }
 
 .warum-moment {
-  padding: var(--space-lg) var(--space-md) var(--space-lg) 0;
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid rgba(38, 53, 47, 0.18);
+  text-align: center;
 }
 
+/* :nth-child(even) der vorherigen 2×2-Variante wird hier explizit
+   neutralisiert, damit kein vertikaler Trenner und keine seitliche
+   Polsterung mehr greifen. */
 .warum-moment:nth-child(even) {
-  padding-left: var(--space-md);
+  padding-left: 0;
   padding-right: 0;
-  border-left: 1px solid rgba(38, 53, 47, 0.18);
+  border-left: none;
 }
 
 .warum-moment-text {
@@ -1631,24 +1658,14 @@ p {
   line-height: 1.35;
   letter-spacing: -0.5px;
   color: var(--color-dark-green);
-  max-width: 26ch;
+  max-width: none;
+  margin-inline: auto;
   margin-bottom: 0;
 }
 
 .warum-textideen-note {
   font-style: italic;
   margin-top: var(--space-sm);
-}
-
-@media (max-width: 768px) {
-  .warum-moments {
-    grid-template-columns: 1fr;
-  }
-
-  .warum-moment:nth-child(even) {
-    padding-left: 0;
-    border-left: none;
-  }
 }
 
 /* --- Abschluss (Cream) --- */
