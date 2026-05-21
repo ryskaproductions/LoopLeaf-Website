@@ -79,10 +79,10 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 
 ## Rechtliches
 
-- [ ] Datenschutztext vollständig aus finaler Datei übernommen
-- [ ] Datenschutztext nicht automatisch umformuliert
-- [ ] Impressum verlinkt korrekt extern
-- [ ] Kontaktadresse stimmt
+- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitt 6 zuletzt aktualisiert 21.05.2026)
+- [x] Datenschutztext nicht automatisch umformuliert
+- [x] Impressum verlinkt korrekt extern
+- [x] Kontaktadresse stimmt (c/o Online-Impressum #7924, Europaring 90, 53757 St. Augustin)
 - [ ] Cookie-Banner und Datenschutz vor Veröffentlichung noch einmal geprüft
 
 ## Inhalte

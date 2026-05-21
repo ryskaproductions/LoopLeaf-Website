@@ -89,3 +89,22 @@ Nicht:
 - automatisch umformulieren
 - rechtliche Aussagen selbst ergänzen
 - Inhalte kürzen
+
+---
+
+## Änderungshistorie Datenschutzerklärung
+
+### 21.05.2026 – Abschnitt 6 aktualisiert
+
+Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" wurde auf Basis der aktuellen Quelldatei vollständig ersetzt. Die Abschnitte 1–5 sowie Footer, Navigation und Layout wurden nicht verändert.
+
+**Inhaltliche Erweiterungen gegenüber der Vorversion:**
+
+- Liste lokal gespeicherter App-Daten ergänzt: `Check-ins` jetzt mit Angabe von Datum und Uhrzeit; neue Einträge `lokale Sortier-, Filter- und Anzeigeeinstellungen`
+- Neuer Absatz: interne lokale Zeitstempel für stabile Sortierung (Anlagedatum Kontakte, Anlagedatum Textideen, Favorisierungszeitpunkt)
+- Neuer Absatz: Erläuterung der „Heute kontaktiert"-Funktion und lokaler Zeitpunktspeicherung
+- Abschnitt `App-Einstellungen` erweitert zu `App-Einstellungen, Sortierung, Filter und optionale Kontaktfelder` – mit Beschreibung lokaler Sortieroptionen (Kontakte-Seite) und Anzeigefilter (Textideen-Seite)
+- Neuer Unterabschnitt `Textideen und Favoriten` mit Beschreibung vorinstallierter Kategorien und lokaler Zeitstempel bei eigenen Textideen/Favoriten
+- Abschnitt `Zweck und Rechtsgrundlage` erweitert: Sortieren und Filtern nach Kategorien und Favoriten explizit erwähnt
+- Abschnitt `Externe Links` umbenannt und erweitert: Verlinkung zur LoopLeaf-Webseite und projektbezogenen Unterseiten nun explizit beschrieben
+- Abschnitt `Löschen lokaler App-Daten` erweitert: Zurücksetzen von Sortier-/Filter-/Anzeigeeinstellungen, Reminder-Einstellungen, Kontaktformular-Optionen, Kontaktverlauf und internen Zeitstempeln nun explizit aufgeführt
