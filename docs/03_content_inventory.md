@@ -486,7 +486,7 @@ Text (5 Absätze):
 ```text
 Neurodiversität spielt in meinem Umfeld eine große Rolle.
 
-Viele Gespräche mit Freundinnen, Freunden und Menschen aus meinem Umfeld haben beeinflusst, wie LoopLeaf entstanden ist – und wie die App heute funktioniert und stetig weiterwächst. Dabei sind ganz unterschiedliche Alltagserfahrungen, Bedürfnisse und Perspektiven eingeflossen: Erfahrungen mit AD(H)S und Autismus ebenso wie Momente, in denen der Alltag einfach zu voll, zu laut oder zu viel wird.
+Viele Gespräche mit Freundinnen, Freunden und Menschen aus meinem Umfeld haben beeinflusst, wie LoopLeaf entstanden ist – und wie die App heute funktioniert und stetig weiterwächst. Dabei sind ganz unterschiedliche Alltagserfahrungen, Bedürfnisse und Perspektiven eingeflossen: Erfahrungen mit Hochsensibilität, AD(H)S und Autismus ebenso wie Momente, in denen der Alltag einfach zu voll, zu laut oder zu viel wird.
 
 Denn nicht jeder erlebt soziale Kontakte gleich. Für manche Menschen kostet ein Treffen unglaublich viel Energie. Manche verlieren Nachrichten im Alltagschaos aus dem Blick. Manche brauchen lange, um wieder in Kontakt zu kommen, obwohl ihnen Beziehungen sehr wichtig sind.
 
