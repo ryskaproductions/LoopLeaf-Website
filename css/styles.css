@@ -1028,6 +1028,11 @@ p {
   color: var(--color-text-soft);
   max-width: 520px;
   text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.ryska-intro-desc:last-of-type {
+  margin-bottom: 0;
 }
 
 

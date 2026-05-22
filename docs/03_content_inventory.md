@@ -413,10 +413,12 @@ Unterzeile:
 Kleine cozy digitale Helfer für einen entspannteren Alltag. 🌿
 ```
 
-Beschreibung:
+Beschreibung (zwei Absätze):
 
 ```text
 Ryska Productions ist ein privates App-Projekt von Katharina Virginia Thielen. Unter diesem Namen entstehen kleine, liebevoll gestaltete Apps, die den Alltag leichter, entspannter und übersichtlicher machen sollen.
+
+LoopLeaf wächst dabei nicht im stillen Kämmerlein: Feedback von Freundinnen, Freunden und Menschen aus meinem Umfeld ist mir unglaublich wichtig. Rückmeldungen, Ideen und ehrliche Eindrücke helfen mir dabei, die App Schritt für Schritt weiterzuentwickeln – nah an dem, was Menschen im Alltag wirklich brauchen.
 ```
 
 ### Kachel / Bild 1
