@@ -556,7 +556,7 @@ Text:
 ```text
 Ryska ist der Name meiner Hündin.
 
-Sie war ein wunderbarer Hund, der viel Freude und cozyness in mein Leben gebracht hat. Mir hätte also kein besserer Name einfallen können.
+Sie war ein wunderbarer Hund, der viel Freude, Liebe und Verbundenheit in mein Leben gebracht hat. Mir hätte also kein besserer Name einfallen können.
 ```
 
 ### Kachel / Bild 6
