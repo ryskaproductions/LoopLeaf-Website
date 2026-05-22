@@ -382,7 +382,171 @@ Asset-/Alt-Hinweis:
 Lokal
 ```
 
-## Seite „Über Ryska Productions“
+## Seite „Warum LoopLeaf?” (warum.html)
+
+### Navigation
+
+Wie alle Seiten – aktive Seite markiert mit `aria-current=”page”`.
+
+### Hero-Bereich
+
+Label (klein, über H1):
+
+```text
+Die Idee hinter LoopLeaf
+```
+
+H1:
+
+```text
+Warum es LoopLeaf gibt
+```
+
+Statement-Zeilen (Montserrat Light):
+
+```text
+Für Menschen mit vollem Kopf.
+Für Menschen, die oft schon im Kopf geantwortet haben.
+Für Menschen, die Kontakte nicht vergessen – sondern manchmal im Alltag verlieren.
+Für Menschen, die sich über Nachrichten freuen, aber nicht immer sofort antworten können.
+```
+
+Bild: `assets/images/platzhalter-warum-ist-LoopLeaf-entstanden.PNG`
+
+### Persönlicher Einstieg (Sage-Hintergrund)
+
+Überschrift (H2):
+
+```text
+Kontakte bedeuten nicht weniger,
+nur weil Antworten manchmal schwerfallen.
+```
+
+Lead:
+
+```text
+Beziehungen können wichtig sein – und trotzdem schwerfallen.
+```
+
+Text (5 Absätze):
+
+```text
+LoopLeaf ist nicht entstanden, weil ich produktiver werden wollte. Und auch nicht, weil ich dachte, Menschen müssten ihre Freundschaften „optimieren”.
+
+Die Idee entstand aus einem Gefühl, das viele Menschen kennen – über das aber kaum jemand spricht.
+
+Dieses Gefühl, an jemanden zu denken. Sich ehrlich über eine Nachricht zu freuen. Antworten zu wollen und es trotzdem nicht zu schaffen.
+
+Nicht aus Desinteresse, sondern weil der Alltag laut ist, der Kopf zu voll ist oder die soziale Energie manchmal einfach fehlt.
+
+Weil aus „Ich antworte später” plötzlich drei Wochen werden – und mit jeder weiteren Stunde das schlechte Gewissen wächst. Und damit auch die Hürde, endlich zu antworten.
+```
+
+Abschluss (visuell hervorgehoben):
+
+```text
+Ich kenne dieses Gefühl sehr gut.
+
+Und ich habe gemerkt, dass unglaublich viele andere Menschen es auch kennen.
+```
+
+### Wiedererkennungs-Abschnitt (Dunkelgrün-Hintergrund)
+
+Überschrift:
+
+```text
+Vielleicht erkennst du dich darin wieder?
+```
+
+10 Statements (Blockquotes):
+
+```text
+„Ich habe die Nachricht gelesen, mich total gefreut – und dann vergessen zu antworten.”
+„Ich habe eigentlich schon längst im Kopf geantwortet.”
+„Je länger ich warte, desto schwieriger wird es, überhaupt noch zu schreiben.”
+„Ich denke oft an Menschen – aber der Alltag zieht mich einfach weiter.”
+„Manchmal reicht meine soziale Energie gerade nur zum Lesen.”
+„Ich möchte niemanden verlieren. Aber Beziehungen fühlen sich manchmal trotzdem überwältigend an.”
+„Ich brauche oft ewig, um die richtigen Worte zu finden.”
+„Ich habe Angst, dass es jetzt schon zu spät zum Antworten ist.”
+„Kontakte sind mir wichtig. Mein Kopf macht es mir nur manchmal schwer.”
+„Wenn eine gelesene Nachricht nicht mehr sichtbar ist, rutscht sie manchmal einfach aus meinem Blick.”
+```
+
+### Abschnitt „Nicht jeder Kopf fühlt gleich.” (Cream-Hintergrund)
+
+Überschrift:
+
+```text
+Nicht jeder Kopf fühlt gleich.
+```
+
+Text (5 Absätze):
+
+```text
+Neurodiversität spielt in meinem Umfeld eine große Rolle.
+
+Viele Gespräche mit Freundinnen, Freunden und Menschen aus meinem Umfeld haben beeinflusst, wie LoopLeaf entstanden ist – und wie die App heute funktioniert und stetig weiterwächst. Dabei sind ganz unterschiedliche Alltagserfahrungen, Bedürfnisse und Perspektiven eingeflossen: Erfahrungen mit AD(H)S und Autismus ebenso wie Momente, in denen der Alltag einfach zu voll, zu laut oder zu viel wird.
+
+Denn nicht jeder erlebt soziale Kontakte gleich. Für manche Menschen kostet ein Treffen unglaublich viel Energie. Manche verlieren Nachrichten im Alltagschaos aus dem Blick. Manche brauchen lange, um wieder in Kontakt zu kommen, obwohl ihnen Beziehungen sehr wichtig sind.
+
+Und viele Menschen setzen sich dabei selbst enorm unter Druck.
+
+LoopLeaf soll diesen Druck nicht verstärken, sondern leiser machen. Die App soll kein schlechtes Gewissen erzeugen, sondern eine sanfte Unterstützung sein. Keine Streaks und kein „Du hast Person X seit 14 Tagen ignoriert”. LoopLeaf ist ein kleiner Anker im Alltag.
+```
+
+### Abschnitt „Nicht jeder pflegt Beziehungen auf die gleiche Weise.” (Sage-Hintergrund)
+
+Überschrift:
+
+```text
+Nicht jeder pflegt Beziehungen auf die gleiche Weise.
+```
+
+Text (3 Absätze + Moments-Grid + Notiz):
+
+```text
+Manche Menschen schreiben jeden Tag gerne mit anderen. Manche brauchen mehr Ruhe zwischen Gesprächen. Manche haben Phasen voller Energie – und dann wieder Tage oder Wochen, an denen selbst eine kleine Antwort schwerfallen kann.
+
+Deshalb sollte sich auch eine App nicht so anfühlen, als würde sie von allen Menschen das Gleiche erwarten.
+
+LoopLeaf lässt sich bewusst individuell anpassen. Du kannst selbst entscheiden, wie oft du an bestimmte Menschen erinnert werden möchtest. Du kannst Pausen machen, ohne das Gefühl zu haben, „hinterherzuhinken”. Für manche Menschen ist ein kurzer Sticker schon ein liebevolles Zeichen der Wertschätzung. Andere schreiben lieber lange Nachrichten oder melden sich per Sprachnachricht. Auch das darf unterschiedlich sein.
+```
+
+2×2-Moments-Grid:
+
+```text
+Für Tage, an denen der Akku leer ist.
+Dein eigenes Tempo. Dein eigener Rhythmus.
+Pausen ohne schlechtes Gewissen.
+Worte, wenn sie fehlen.
+```
+
+Textideen-Notiz (kursiv):
+
+```text
+Deshalb gibt es in LoopLeaf auch kleine Textideen für Momente, in denen einem vielleicht die Worte fehlen – nach längerer Funkstille oder an Tagen, an denen der Akku leer ist.
+```
+
+### Übergangs-Bild
+
+Bild: `assets/images/emotional-scene-connection-with-distance.png`
+
+Alt-Text: `Ruhige Szene am Meer mit Blick aufs Handy`
+
+### Abschlussabschnitt (Dunkelgrün-Hintergrund)
+
+```text
+Beziehungen müssen nicht perfekt gepflegt werden, um wichtig zu sein.
+
+Vielleicht geht es nicht darum, immer sofort zu antworten.
+Sondern darum, auf die eigenen Ressourcen zu achten – und Menschen nicht aus dem Herzen zu verlieren.
+
+LoopLeaf soll keine perfekte soziale Version von dir erschaffen.
+Sondern dich sanft dabei unterstützen, auf deine eigene Weise verbunden zu bleiben.
+```
+
+## Seite „Über Ryska Productions”
 
 ### Navigation
 
