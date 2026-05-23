@@ -1429,9 +1429,10 @@ p {
 
 .warum-hero-image {
   width: 100%;
-  height: auto;
+  height: clamp(260px, 40vw, 520px);
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .warum-hero-tagline {

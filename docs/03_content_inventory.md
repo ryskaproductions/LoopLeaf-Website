@@ -411,7 +411,7 @@ Für Menschen, die Kontakte nicht vergessen – sondern manchmal im Alltag verli
 Für Menschen, die sich über Nachrichten freuen, aber nicht immer sofort antworten können.
 ```
 
-Bild: `assets/images/platzhalter-warum-ist-LoopLeaf-entstanden.PNG`
+Bild: `assets/images/young-woman-with-dog-cozy.PNG`
 
 ### Persönlicher Einstieg (Sage-Hintergrund)
 

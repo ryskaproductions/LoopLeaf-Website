@@ -124,7 +124,7 @@ Status: finalisiert.
 
 OG/Twitter: `og:url` = `https://www.loopleaf.de/warum.html`, gemeinsames OG-Bild.
 
-Hero-Bild: `assets/images/platzhalter-warum-ist-LoopLeaf-entstanden.PNG`
+Hero-Bild: `assets/images/young-woman-with-dog-cozy.PNG`
 
 Abschnitte (Farb-Abfolge):
 
