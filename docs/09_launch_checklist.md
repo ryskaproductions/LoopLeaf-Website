@@ -80,7 +80,8 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 
 ## Rechtliches
 
-- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitte 5, 5a und 6 zuletzt aktualisiert 27.05.2026)
+- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitte 5, 5a und 6 aktualisiert + Abschnitt 7 neu eingefügt, Stand 27.05.2026)
+- [x] Abschnitt 7 „Datenschutzhinweise für unser Instagram-Profil @loopleaf.app" eingefügt (nur Text, keine technische Instagram-Einbindung)
 - [x] Datenschutztext nicht automatisch umformuliert
 - [x] Impressum verlinkt korrekt extern
 - [x] Kontaktadresse stimmt (c/o Online-Impressum #7924, Europaring 90, 53757 St. Augustin)

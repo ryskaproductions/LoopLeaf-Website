@@ -94,6 +94,23 @@ Nicht:
 
 ## Änderungshistorie Datenschutzerklärung
 
+### 27.05.2026 – Abschnitt 7 neu eingefügt
+
+Abschnitt 7 „Datenschutzhinweise für unser Instagram-Profil @loopleaf.app" aus der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_27Mai26.docx` direkt nach Abschnitt 6 in `datenschutz.html` eingefügt. Abschnitte 1–6 vollständig unverändert. Stand-Datum bleibt 27.05.2026.
+
+**Inhalt Abschnitt 7:**
+
+- Verantwortlichkeit und Zweck des Instagram-Profils (inkl. Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland)
+- Nutzung von Instagram in eigener Verantwortung
+- Interaktionen mit unserem Instagram-Profil (Art. 6 Abs. 1 lit. f DSGVO)
+- Direktnachrichten über Instagram
+- Instagram-Statistiken und Insights (inkl. Art. 26 DSGVO – gemeinsame Verantwortlichkeit)
+- Keine Instagram-Plugins auf unserer Website (kein Embed, kein Feed, kein Script, kein Meta Pixel, kein Like-/Share-Button)
+- Speicherdauer und Löschung
+- Betroffenenrechte und Privatsphäre-Einstellungen
+
+**Hinweis:** Abschnitt 7 ist ausschließlich ein Datenschutzhinweistext. Es wurde keine technische Instagram-Einbindung vorgenommen.
+
 ### 27.05.2026 – Abschnitte 5, 5a und 6 aktualisiert
 
 Datenschutzerklärung auf Basis der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_27Mai26.docx` ab Abschnitt 5 vollständig ersetzt. Stand-Datum aktualisiert auf 27.05.2026. Abschnitte 1–4 und Footer/Navigation unverändert.
