@@ -94,6 +94,31 @@ Nicht:
 
 ## Änderungshistorie Datenschutzerklärung
 
+### 27.05.2026 – Abschnitte 5, 5a und 6 aktualisiert
+
+Datenschutzerklärung auf Basis der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_27Mai26.docx` ab Abschnitt 5 vollständig ersetzt. Stand-Datum aktualisiert auf 27.05.2026. Abschnitte 1–4 und Footer/Navigation unverändert.
+
+**Inhaltliche Änderungen:**
+
+- Abschnitt 5 „Externer Impressumslink und zweiter Kontaktweg" aktualisiert: Erwähnung zusätzlicher projektbezogener Links (LoopLeaf-Website, Instagram-Profil) im Social Hub; Absätze zu Social-Hub-Links und Kontaktformular aufgeteilt; Rechtsgrundlage um transparente Verlinkung erweitert
+- Abschnitt 5a „Externe Links zu Social-Media-Profilen" neu eingefügt: Beschreibt ausschließlich einfache ausgehende Links (kein Plugin, kein Embed, kein Feed, keine Scripts); @loopleaf.app Instagram-Profil explizit erwähnt; Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO
+- Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" umfassend aktualisiert (Emoji-Auswahl, Ansichtsgrößen, Check-ins an Pausetagen, Onboarding-Detail, Emoji-Anzeigeoption bei Textideen, erweiterte Externe-Links-Beschreibung inkl. Social Hub + Instagram, detaillierteres Löschen-Verhalten)
+
+## Instagram-Link im Footer
+
+### 27.05.2026 – Einfacher ausgehender Instagram-Link ergänzt
+
+In den Footer aller vier HTML-Seiten wurde ein einfacher ausgehender Link zum Instagram-Profil @loopleaf.app eingebaut.
+
+**Technische Details:**
+
+- URL: `https://www.instagram.com/loopleaf.app`
+- Icon: lokales Asset `assets/icons/Instagram_Glyph_Black.png` (schwarzes Glyph, kein Gradient; Pfad lowercase `icons/`)
+- Position: direkt in `.footer-nav` als letztes Element, nach „Kontakt", mit `·`-Trennzeichen (keine eigene Social-Zeile)
+- HTML-Element: normales `<a>`-Tag mit `target="_blank"`, `rel="noopener noreferrer"`, `referrerpolicy="no-referrer"` und `aria-label="Instagram-Profil von LoopLeaf öffnen"`
+- Kein Social-Media-Plugin, kein Embed, kein Widget, kein Script, kein Feed, kein Like-/Share-Button
+- Beim Laden der Seite werden keine Daten an Instagram/Meta übertragen; Datenübertragung findet erst beim aktiven Klick statt
+
 ### 21.05.2026 – Abschnitt 6 aktualisiert
 
 Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" wurde auf Basis der aktuellen Quelldatei vollständig ersetzt. Die Abschnitte 1–5 sowie Footer, Navigation und Layout wurden nicht verändert.

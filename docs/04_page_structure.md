@@ -117,6 +117,8 @@ Feature-Reihen-Layout Desktop: `grid-template-columns: 56px 1fr 240px` (Zahl | C
 Footer-Struktur:
 - Obere Zeile: `.footer-brand-row` mit zwei `.footer-brand-item`-Gruppen
 - Unterer Block: `.footer-meta` mit `.footer-small-heading`, `.footer-subline`, `.footer-nav`, `.footer-note`, `.footer-copyright`
+- `.footer-nav` enthält: Datenschutz · Impressum · Kontakt · [Instagram-Icon-Link]
+- Instagram-Icon: `assets/icons/Instagram_Glyph_Black.png` (lokal, 20×20 px, schwarzes Glyph), direkt in `.footer-nav` als letztes Element, Link zu `https://www.instagram.com/loopleaf.app`, kein Plugin, kein Script
 
 ## Warum-Seite: warum.html
 

@@ -537,6 +537,26 @@ p {
   user-select: none;
 }
 
+/* Instagram-Link in der Footer-Nav (einfacher ausgehender Link, kein Plugin, kein Script) */
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  border-radius: 4px;
+}
+
+.footer-social-link:hover {
+  opacity: 1;
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer-note {
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -607,7 +627,8 @@ p {
   .site-nav a,
   .mobile-nav a,
   .btn,
-  .footer-nav a {
+  .footer-nav a,
+  .footer-social-link {
     transition: none;
   }
 }

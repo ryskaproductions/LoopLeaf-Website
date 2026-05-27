@@ -80,10 +80,11 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 
 ## Rechtliches
 
-- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitt 6 zuletzt aktualisiert 21.05.2026)
+- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitte 5, 5a und 6 zuletzt aktualisiert 27.05.2026)
 - [x] Datenschutztext nicht automatisch umformuliert
 - [x] Impressum verlinkt korrekt extern
 - [x] Kontaktadresse stimmt (c/o Online-Impressum #7924, Europaring 90, 53757 St. Augustin)
+- [x] Instagram-Link im Footer: in `.footer-nav` nach „Kontakt" eingebettet (Datenschutz · Impressum · Kontakt · [Icon]); einfacher ausgehender Link, kein Plugin, kein Embed, kein Script; Icon lokal aus `assets/icons/Instagram_Glyph_Black.png` (lowercase Pfad); `rel="noopener noreferrer"`, `referrerpolicy="no-referrer"`, `aria-label` gesetzt
 - [ ] Cookie-Banner und Datenschutz vor Veröffentlichung noch einmal geprüft
 
 ## Inhalte
