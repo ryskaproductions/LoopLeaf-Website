@@ -116,9 +116,22 @@ Feature-Reihen-Layout Desktop: `grid-template-columns: 56px 1fr 240px` (Zahl | C
 
 Footer-Struktur:
 - Obere Zeile: `.footer-brand-row` mit zwei `.footer-brand-item`-Gruppen
-- Unterer Block: `.footer-meta` mit `.footer-small-heading`, `.footer-subline`, `.footer-nav`, `.footer-note`, `.footer-copyright`
+- Unterer Block: `.footer-meta` – zweispaltig auf Desktop (ab 768 px), gestapelt auf Mobile
+  - `.footer-meta-left`: `.footer-small-heading`, `.footer-subline`, `.footer-nav`, `.footer-note`, `.footer-copyright`
+  - `.footer-meta-right`: `.footer-download-heading` („LoopLeaf laden") + `.footer-store-badges` mit App Store Badge; auf Desktop rechtsbündig (`align-items: flex-end`), vertikal ausgerichtet mit `Ein Projekt von Ryska Productions.`
 - `.footer-nav` enthält: Datenschutz · Impressum · Kontakt · [Instagram-Icon-Link]
-- Instagram-Icon: `assets/icons/Instagram_Glyph_Black.png` (lokal, 20×20 px, schwarzes Glyph), direkt in `.footer-nav` als letztes Element, Link zu `https://www.instagram.com/loopleaf.app`, kein Plugin, kein Script
+- Instagram-Icon: `assets/icons/Instagram_Glyph_Black.png` (lokal, 20×20 px, schwarzes Glyph), kein Plugin, kein Script
+- App Store Badge: `assets/icons/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg` (lokal, kein externes Script, kein Tracking)
+  - Footer-Badge-Breite: 155 px (height: auto); beim Laden der Seite keine Datenübertragung an Apple
+  - `.footer-store-badges` ist ein `flex-direction: column`-Container, bereit für spätere Google-Play-Badge-Ergänzung
+
+Hero-Download-Gruppe (index.html):
+- Reihenfolge: H1-Headline → Intro-Text → Status-Pill → App Store Badge
+- Status-Pill: „LoopLeaf für iOS ist da · Android folgt bald"
+- App Store Badge (lokal, kein externes Script); beim Laden der Seite keine Datenübertragung an Apple
+  - Mobile/Tablet: 190 px breit (height: auto, ca. 56 px)
+  - Desktop (≥ 1024 px): 230 px breit (height: auto, ca. 68 px)
+- Download-Gruppe steht nach dem Intro-Text, vor dem App-Mockup-Bild
 
 ## Warum-Seite: warum.html
 
