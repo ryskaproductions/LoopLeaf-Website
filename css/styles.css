@@ -59,24 +59,28 @@
 
 :root {
   /* Grundfarben */
-  --color-cream:       #F7F4EC;   /* Seitenhintergrund, helle Sektionen */
-  --color-dark-green:  #26352F;   /* Feature-Sektion, Überschriften, Buttons */
+  --color-cream:           #F7F4EC;   /* Seitenhintergrund, helle Sektionen */
+  --color-dark-green:      #26352F;   /* Feature-Sektion, Überschriften, Buttons */
+  --color-dark-green-deep: #1a2520;   /* Button-Hover (gedunkelte Schattierung von dark-green) */
 
   /* Weitere Grundfarben */
-  --color-muted:       #C3C4BD;   /* Trennlinien, dezente Ränder */
-  --color-mid-green:   #8F958E;   /* sekundärer Text, gedämpfte Elemente */
-  --color-text-soft:   #5A655E;   /* Fließtext weich */
+  --color-muted:           #C3C4BD;   /* Trennlinien, dezente Ränder */
+  --color-mid-green:       #8F958E;   /* Reserve: sekundärer Text / gedämpfte Elemente */
+  --color-text-soft:       #5A655E;   /* Fließtext weich */
+
+  /* Oberflächen */
+  --color-surface-tinted:  #eeeae0;   /* getönter Infohintergrund (z. B. Datenschutz-Adressblock) */
 
   /* Akzentfarben */
-  --color-sage:        #A7C1B2;   /* Kopfzeile, Badges, Highlights */
-  --color-sage-dark:   #6F8B79;   /* Hover-Zustände, sekundäre Akzente */
-  --color-white:       #FFFFFF;   /* Text auf dunklem / salbeigrünem Hintergrund */
-  --color-sage-light:  #C8D3CC;   /* helle Sektionshintergründe (Ryska-Seite) */
+  --color-sage:            #A7C1B2;   /* Kopfzeile, Badges, Highlights */
+  --color-sage-dark:       #6F8B79;   /* Hover-Zustände, sekundäre Akzente */
+  --color-white:           #FFFFFF;   /* Text auf dunklem / salbeigrünem Hintergrund */
+  --color-sage-light:      #C8D3CC;   /* helle Sektionshintergründe (Ryska-Seite) */
 
   /* Aliase für Lesbarkeit im Code */
-  --color-text:        var(--color-dark-green);
-  --color-border-soft: var(--color-muted);
-  --color-card:        var(--color-white);
+  --color-text:            var(--color-dark-green);
+  --color-border-soft:     var(--color-muted);    /* aktuell ungenutzt – Reserve für spätere Designvarianten */
+  --color-card:            var(--color-white);    /* aktuell ungenutzt – Reserve für spätere Designvarianten */
 
   /* Schriften */
   --font-heading: 'Caudex', Georgia, serif;
@@ -102,6 +106,13 @@
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
 }
+
+/*
+  Opacity-Konvention (rgba-Werte, bewusst nicht in Tokens umgebaut):
+  - --color-cream mit niedriger Opacity (0.15–0.25) → dezente Border-/Trennlinien auf dunklen Sektionen
+  - --color-cream mit hoher Opacity (0.8–0.95)      → Sekundärtext auf dunklen Sektionen
+  - --color-dark-green mit niedriger Opacity (0.18)  → dezente Trennlinien auf hellen Sektionen
+*/
 
 
 /* --- 3. RESET & BASIS --- */
@@ -413,7 +424,7 @@ p {
 }
 
 .btn--primary:hover {
-  background-color: #1a2520;
+  background-color: var(--color-dark-green-deep);
 }
 
 .btn--outline {
@@ -1103,7 +1114,7 @@ p {
   font-family: var(--font-heading);
   font-size: 30px;
   font-weight: 400;
-  color: #26352F;
+  color: var(--color-dark-green);
   text-align: center;
   margin-bottom: 12px;
 }
@@ -1438,7 +1449,7 @@ p {
   font-weight: 300;
   line-height: 1.9;
   color: var(--color-dark-green);
-  background-color: #eeeae0;
+  background-color: var(--color-surface-tinted);
   border-left: 3px solid var(--color-sage-dark);
   padding: clamp(16px, 2.5vw, 24px) clamp(20px, 3vw, 32px);
   margin-block: clamp(12px, 1.5vw, 18px);
