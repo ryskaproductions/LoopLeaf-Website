@@ -22,6 +22,13 @@
     navToggle.setAttribute('aria-expanded', 'false');
     navToggle.setAttribute('aria-label', 'Menü öffnen');
     mobileNav.classList.remove('is-open');
+
+    // Fokus zurücksetzen bevor aria-hidden gesetzt wird,
+    // damit kein fokussiertes Element in einem aria-hidden-Bereich verbleibt.
+    if (mobileNav.contains(document.activeElement)) {
+      navToggle.focus();
+    }
+
     mobileNav.setAttribute('aria-hidden', 'true');
   }
 
