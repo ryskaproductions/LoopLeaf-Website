@@ -6,6 +6,7 @@
 /
 ├── index.html
 ├── warum.html
+├── neuigkeiten.html
 ├── ryska.html
 ├── datenschutz.html
 ├── css/
@@ -83,6 +84,7 @@ Desktop- und Mobile-Navigation (finaler Stand):
 ```text
 Startseite
 Warum LoopLeaf?
+Neuigkeiten
 Über Ryska Productions
 ```
 
@@ -93,6 +95,7 @@ Technische Zielpfade:
 ```text
 Startseite        → index.html
 Warum LoopLeaf?   → warum.html
+Neuigkeiten       → neuigkeiten.html
 Über Ryska Productions → ryska.html
 Datenschutz       → datenschutz.html
 Impressum         → https://mein.online-impressum.de/ryska-productions/
@@ -199,3 +202,50 @@ Der Link soll extern bleiben:
 ```text
 https://mein.online-impressum.de/ryska-productions/
 ```
+
+## Neuigkeiten-Seite: neuigkeiten.html
+
+Status: finalisiert (Erstveröffentlichung mit zwei sichtbaren Einträgen).
+
+Zweck: kleine, ruhige Update-Chronik rund um LoopLeaf. **Kein echter Blog** — keine Kommentare, keine Autor:innenboxen, keine Lesedauer, keine Einzelbeitragsseiten, keine „Weiterlesen"-Links. Neueste Einträge stehen oben.
+
+Aufbau:
+
+1. Header (identisch mit anderen Seiten)
+2. `.news-hero` — Cream: zentriertes LoopLeaf-Logo (`.news-hero-logo`), Label „Aktuelles rund um LoopLeaf" (`.news-hero-label`), H1 „Neuigkeiten", Einleitungstext (`.news-hero-intro`). Übernimmt visuell die Werte der Warum-Hero (eigene Klassen, ohne CSS-Duplikate).
+3. `.news-section` — Cream: enthält `.news-list` (`<ol>`) mit einzelnen `.news-card`-Einträgen.
+4. Footer (identisch mit anderen Seiten)
+
+Karten-Struktur (`.news-card`):
+
+```text
+.news-card
+  .news-card__media   → .news-card__image (Bild)
+  .news-card__body
+    .news-card__date  → <time datetime="…">
+    .news-card__badges (ul → li.news-card__badge)
+    .news-card__title (h2)
+    .news-card__text  (p)
+```
+
+- Hintergrund: `--color-sage`
+- Pills („Badges"): Cream-Hintergrund, Dark-Green-Text, Pill-Rundung
+- Desktop (≥ 768 px): Bild links (38 %), Text rechts (62 %)
+- Mobile: Bild oben (8:5-Verhältnis), Text darunter
+- Sanfte Rundungen (`--radius-md`), keine harten Schatten
+
+Sichtbare Einträge (Stand der Erstveröffentlichung):
+
+1. **7. Juni 2026** – „LoopLeaf bekommt einen Dark Mode für iOS" (Bild: `assets/images/news_darkmode_ios.PNG`)
+2. **28. Mai 2026** – „LoopLeaf ist im App Store gestartet" (Bild: `assets/images/news_ios_release3.PNG`; Modifier `news-card__image--focus-right` für rechtsbetonten Crop in der Tablet-Ansicht)
+
+Vorbereitet, aktuell **nicht sichtbar**:
+
+- **10. Juni 2026** – „LoopLeaf ist jetzt auch für Android da" (als HTML-Kommentar in `neuigkeiten.html` direkt am Anfang von `.news-list` hinterlegt). Beim späteren Veröffentlichen lediglich den umschließenden Kommentar entfernen und das exakte Datum prüfen. Bild-Asset für diesen Eintrag: `assets/images/news_android_release.PNG` (Pfad nur als Platzhalter im Kommentar; Asset wird beim Veröffentlichen ergänzt).
+
+SEO:
+
+- `<title>` = „Neuigkeiten | LoopLeaf"
+- Meta-Beschreibung und OG/Twitter-Tags analog zu den anderen Seiten gesetzt
+- `og:url` = `https://www.loopleaf.de/neuigkeiten.html`
+- Eintrag in `sitemap.xml` ergänzt

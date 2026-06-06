@@ -5,6 +5,8 @@ Dieser Ordner enthält die aktuelle Arbeitsgrundlage für den Nachbau der bisher
 Ziel ist eine einfache, stabile, responsive und gut wartbare statische Website für:
 
 - **LoopLeaf** – App-Landingpage
+- **Warum LoopLeaf?** – Hintergrundseite zur Idee der App
+- **Neuigkeiten** – ruhige Update-Chronik (statisch, kein echter Blog)
 - **Ryska Productions** – Projekt-/Studioseite
 - **Datenschutz** – aus bereitgestellter Word-Datei
 - **Impressum** – externer Link zum Impressumsdienst

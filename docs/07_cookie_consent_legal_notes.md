@@ -94,6 +94,21 @@ Nicht:
 
 ## Änderungshistorie Datenschutzerklärung
 
+### 07.06.2026 – Abschnitt 6 aktualisiert
+
+Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" auf Basis der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_8Juni2026.docx` vollständig ersetzt. Stand-Datum aktualisiert auf 07.06.2026. Abschnitte 1–4, 5, 5a und 7 sowie Footer/Navigation unverändert.
+
+**Inhaltliche Ergänzungen in Abschnitt 6:**
+
+- Lokal gespeicherte Hell-/Dunkelmodus- bzw. Appearance-Einstellung (`Darstellungseinstellung für Hell-/Dunkelmodus`) ergänzt – sowohl in der Liste der lokal gespeicherten Daten als auch als eigener erläuternder Absatz im Unterabschnitt „App-Einstellungen, Sortierung, Filter und optionale Kontaktfelder"
+- Lokaler „Was ist neu"-Hinweis bzw. Versionsstatus ergänzt – als Eintrag in der Liste lokal gespeicherter Daten und als eigener erläuternder Absatz
+- Hinweis ergänzt, dass die Planung lokaler Erinnerungen ausdrücklich „innerhalb der App" erfolgt
+- Unterabschnitt „Lokale Benachrichtigungen" um den Hinweis erweitert, dass Systemberechtigungen für Benachrichtigungen vom Betriebssystem verwaltet werden und durch „Alle Daten löschen" nicht zurückgesetzt werden
+- Unterabschnitt „Externe Links innerhalb der App und Verlinkung zur LoopLeaf-Webseite" erweitert: App-Store-/Google-Play-Bewertungsfunktion (Rate-App-Link) als eigene Erläuterung ergänzt; längerer Absatz in mehrere Absätze aufgeteilt
+- Unterabschnitt „Löschen lokaler App-Daten" erweitert: `Pausetage` ergänzt um `bzw. Freeze-Daten`; Rücksetzung der Darstellungseinstellung auf „System" ergänzt; Hinweis zu Rücksetzung der „Was ist neu"-Statusinformation ergänzt; Hinweis ergänzt, dass Android-Systemberechtigungen für Benachrichtigungen durch „Alle Daten löschen" nicht zurückgesetzt werden
+
+**Hinweis:** Die aktualisierte Datenschutzerklärung liegt zum Abgleich zusätzlich im Docs-Ordner unter `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_8Juni2026.docx`.
+
 ### 27.05.2026 – Abschnitt 7 neu eingefügt
 
 Abschnitt 7 „Datenschutzhinweise für unser Instagram-Profil @loopleaf.app" aus der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_27Mai26.docx` direkt nach Abschnitt 6 in `datenschutz.html` eingefügt. Abschnitte 1–6 vollständig unverändert. Stand-Datum bleibt 27.05.2026.

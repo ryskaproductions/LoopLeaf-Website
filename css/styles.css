@@ -1832,3 +1832,202 @@ p {
 .warum-closing-inner p:last-child {
   margin-bottom: 0;
 }
+
+
+/* ================================================================
+   NEUIGKEITEN-SEITE  (neuigkeiten.html)
+   Nutzt das globale Designsystem: Farben, Schriften, .container.
+   Der Hero übernimmt visuell exakt die Werte der Warum-Hero —
+   semantisch eigene Klassen, technisch via Mehrfach-Selektoren
+   ohne CSS-Duplikate.
+   ================================================================ */
+
+
+/* --- Hero (Cream) – teilt Werte mit .warum-hero --- */
+
+.news-hero {
+  background-color: var(--color-cream);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.news-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-hero-logo {
+  width: clamp(96px, 13vw, 136px);
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.news-hero-label {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-dark-green);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.news-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 72px);
+  letter-spacing: -2px;
+  max-width: 20ch;
+  margin-bottom: var(--space-lg);
+  margin-inline: auto;
+}
+
+.news-hero-intro {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 20px);
+  font-weight: 300;
+  color: var(--color-dark-green);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .news-hero {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
+
+/* --- Update-Liste / Karten (Cream-Hintergrund mit Sage-Karten) --- */
+
+.news-section {
+  background-color: var(--color-cream);
+  padding-bottom: var(--space-2xl);
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.news-card {
+  background-color: var(--color-sage);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__media {
+  width: 100%;
+  /* 8:5-Verhältnis für einheitliches Erscheinungsbild auf Mobile */
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.news-card__body {
+  padding: clamp(20px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__date {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text-soft);
+  margin-bottom: 0.6rem;
+  max-width: none;
+}
+
+.news-card__badges {
+  list-style: none;
+  margin: 0 0 var(--space-sm) 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+}
+
+.news-card__badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-cream);
+  color: var(--color-dark-green);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  line-height: 1.2;
+}
+
+.news-card__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 32px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--color-dark-green);
+  margin: 0 0 var(--space-sm) 0;
+  max-width: none;
+}
+
+.news-card__text {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.4vw, 17px);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-dark-green);
+  margin: 0;
+  max-width: none;
+}
+
+/* Desktop ab 768 px: Bild links, Text rechts */
+@media (min-width: 768px) {
+  .news-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .news-card__media {
+    flex: 0 0 38%;
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+
+  .news-card__body {
+    flex: 1 1 62%;
+    padding: clamp(28px, 3.5vw, 48px);
+    justify-content: center;
+  }
+}
+
+/*
+  Nur Tablet (768–1023 px): In der schmalen Bildspalte croppt object-fit:
+  cover horizontalstark. Bei Motiven, deren Hauptobjekt (z. B. das Handy)
+  rechts der Bildmitte sitzt, wird der Crop gezielt nach rechts verschoben –
+  links wird etwas mehr abgeschnitten, das Hauptmotiv bleibt sichtbar.
+  Mobile (volles Bild) und Desktop (≥1024 px, center) bleiben unverändert.
+*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .news-card__image--focus-right {
+    object-position: 68% center;
+  }
+}
