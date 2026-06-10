@@ -121,19 +121,24 @@ Footer-Struktur:
 - Obere Zeile: `.footer-brand-row` mit zwei `.footer-brand-item`-Gruppen
 - Unterer Block: `.footer-meta` – zweispaltig auf Desktop (ab 768 px), gestapelt auf Mobile
   - `.footer-meta-left`: `.footer-small-heading`, `.footer-subline`, `.footer-nav`, `.footer-note`, `.footer-copyright`
-  - `.footer-meta-right`: `.footer-download-heading` („LoopLeaf laden") + `.footer-store-badges` mit App Store Badge; auf Desktop rechtsbündig (`align-items: flex-end`), vertikal ausgerichtet mit `Ein Projekt von Ryska Productions.`
+  - `.footer-meta-right`: `.footer-download-heading` („LoopLeaf laden") + `.footer-store-badges` mit **beiden** Store-Badges (App Store + Google Play); vertikal ausgerichtet mit `Ein Projekt von Ryska Productions.`
 - `.footer-nav` enthält: Datenschutz · Impressum · Kontakt · [Instagram-Icon-Link]
 - Instagram-Icon: `assets/icons/Instagram_Glyph_Black.png` (lokal, 20×20 px, schwarzes Glyph), kein Plugin, kein Script
-- App Store Badge: `assets/icons/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg` (lokal, kein externes Script, kein Tracking)
-  - Footer-Badge-Breite: 155 px (height: auto); beim Laden der Seite keine Datenübertragung an Apple
-  - `.footer-store-badges` ist ein `flex-direction: column`-Container, bereit für spätere Google-Play-Badge-Ergänzung
+- Store-Badges im Footer (beide lokal, kein externes Script, kein Tracking, keine Datenübertragung beim Laden):
+  - App Store Badge: `assets/icons/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg` — Link unverändert (`https://apps.apple.com/de/app/loopleaf/id6767885278`)
+  - Google Play Badge **ergänzt**: `assets/icons/GetItOnGooglePlay_Badge_Web_color_German.png`, Klasse `.store-badge--play-footer`; Link `https://play.google.com/store/apps/details?id=com.ryska.loopleaf&hl=de&gl=DE`
+  - höhengleich skaliert (App Store 155 px, Google Play 174 px breit, Ratio 3,366:1, Seitenverhältnis erhalten); Breiten parent-gescopt (`.footer-store-badges .store-badge--…`) → immun gegen die Hero-`.store-badge`-Regel
+  - `.footer-store-badges` responsiv: Mobile gestapelt/linksbündig, Tablet (≥ 768 px) gestapelt/rechtsbündig, Desktop (≥ 1024 px) nebeneinander/rechtsbündig (`flex-wrap` bei Bedarf)
+- Footer auf allen fünf Seiten identisch (index, warum, neuigkeiten, ryska, datenschutz)
 
 Hero-Download-Gruppe (index.html):
-- Reihenfolge: H1-Headline → Intro-Text → Status-Pill → App Store Badge
-- Status-Pill: „LoopLeaf für iOS ist da · Android folgt bald"
-- App Store Badge (lokal, kein externes Script); beim Laden der Seite keine Datenübertragung an Apple
-  - Mobile/Tablet: 190 px breit (height: auto, ca. 56 px)
-  - Desktop (≥ 1024 px): 230 px breit (height: auto, ca. 68 px)
+- Reihenfolge: H1-Headline → Intro-Text → Status-Pill → Store-Badges
+- Status-Pill: „LoopLeaf ist da – für iOS und Android" (beide Plattformen verfügbar)
+- Zwei Store-Badges als gemeinsame Download-Gruppe (`.hero-store-badges`, Flex): Mobile gestapelt/zentriert, ab 640 px nebeneinander (`flex-wrap`), Desktop nebeneinander
+  - App Store Badge (lokales SVG): 190 px (Mobile/Tablet) bzw. 230 px (≥ 1024 px) breit
+  - Google Play Badge: `assets/icons/GetItOnGooglePlay_Badge_Web_color_German.png` (lokal); Klasse `.store-badge--play`, höhengleich zum App-Store-Badge skaliert (214 px bzw. 259 px breit, Ratio 3,366:1), Seitenverhältnis erhalten
+  - Google-Play-Link: `https://play.google.com/store/apps/details?id=com.ryska.loopleaf&hl=de&gl=DE`
+  - beide Badges lokal eingebunden, kein externes Script, keine Datenübertragung beim Laden
 - Download-Gruppe steht nach dem Intro-Text, vor dem App-Mockup-Bild
 
 ## Warum-Seite: warum.html
@@ -234,14 +239,13 @@ Karten-Struktur (`.news-card`):
 - Mobile: Bild oben (8:5-Verhältnis), Text darunter
 - Sanfte Rundungen (`--radius-md`), keine harten Schatten
 
-Sichtbare Einträge (Stand der Erstveröffentlichung):
+Sichtbare Einträge (neuester oben):
 
-1. **7. Juni 2026** – „LoopLeaf bekommt einen Dark Mode für iOS" (Bild: `assets/images/news_darkmode_ios.PNG`)
-2. **28. Mai 2026** – „LoopLeaf ist im App Store gestartet" (Bild: `assets/images/news_ios_release3.PNG`; Modifier `news-card__image--focus-right` für rechtsbetonten Crop in der Tablet-Ansicht)
+1. **10. Juni 2026** – „LoopLeaf ist jetzt auch für Android da" (Bild: `assets/images/news_android_release.PNG`; zentrierter Crop, kein Modifier – zwei mittig komponierte Smartphones)
+2. **7. Juni 2026** – „LoopLeaf bekommt einen Dark Mode für iOS" (Bild: `assets/images/news_darkmode_ios.PNG`)
+3. **28. Mai 2026** – „LoopLeaf ist im App Store gestartet" (Bild: `assets/images/news_ios_release3.PNG`; Modifier `news-card__image--focus-right` für rechtsbetonten Crop in der Tablet-Ansicht)
 
-Vorbereitet, aktuell **nicht sichtbar**:
-
-- **10. Juni 2026** – „LoopLeaf ist jetzt auch für Android da" (als HTML-Kommentar in `neuigkeiten.html` direkt am Anfang von `.news-list` hinterlegt). Beim späteren Veröffentlichen lediglich den umschließenden Kommentar entfernen und das exakte Datum prüfen. Bild-Asset für diesen Eintrag: `assets/images/news_android_release.PNG` (Pfad nur als Platzhalter im Kommentar; Asset wird beim Veröffentlichen ergänzt).
+Der Android-Release-Eintrag wurde am 10. Juni 2026 sichtbar veröffentlicht (zuvor als vorbereiteter HTML-Kommentar hinterlegt). Es gibt aktuell keinen versteckten/vorbereiteten Eintrag mehr.
 
 SEO:
 

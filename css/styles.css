@@ -564,19 +564,48 @@ p {
   display: block;
 }
 
-/* App Store Badge im Footer */
+/* Store-Badges im Footer – gemeinsame Download-Gruppe */
 .footer-store-badges {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: flex-start;   /* Mobile: linksbündig, konsistent mit übrigem Footer */
+  gap: 0.6rem;
+}
+
+/* Tablet: weiterhin untereinander, aber rechtsbündig zur rechten Spalte */
+@media (min-width: 768px) {
+  .footer-store-badges {
+    align-items: flex-end;
+  }
+}
+
+/* Desktop: nebeneinander, rechtsbündig; umbrechen bei Bedarf */
+@media (min-width: 1024px) {
+  .footer-store-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem 0.75rem;
+  }
 }
 
 .store-badge--footer {
-  width: 155px;
   height: auto;
   display: block;
   opacity: 0.9;
   transition: opacity var(--transition-fast);
+}
+
+/* Breiten parent-gescopt (Spezifität 0,2,0) → immun gegen die Hero-Regel
+   `.store-badge { width: 230px }`. Höhengleich: App Store 155px ≈ 52px hoch,
+   Google Play 174px ≈ 52px hoch (Ratio 3,366:1). */
+.footer-store-badges .store-badge--footer {
+  width: 155px;
+}
+
+.footer-store-badges .store-badge--play-footer {
+  width: 174px;
 }
 
 .store-badge--footer:hover {
@@ -698,6 +727,7 @@ p {
   .footer-nav a,
   .footer-social-link,
   .store-badge,
+  .store-badge--play,
   .store-badge--footer {
     transition: none;
   }
@@ -783,10 +813,24 @@ p {
   }
 }
 
-/* App Store Badge im Hero */
+/* Store-Badges im Hero – gemeinsame Download-Gruppe */
 .hero-store-badges {
   margin-top: 0;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Ab Tablet: Badges nebeneinander, zentriert; umbrechen bei Bedarf */
+@media (min-width: 640px) {
+  .hero-store-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.25rem;
+  }
 }
 
 .store-badge {
@@ -797,6 +841,12 @@ p {
   transition: opacity var(--transition-fast);
 }
 
+/* Google-Play-Badge: höhengleich zum App-Store-Badge (Ratio 3,366:1
+   vs. 2,99:1 → etwas breiter bei gleicher sichtbarer Button-Höhe). */
+.store-badge--play {
+  width: 214px;
+}
+
 .store-badge:hover {
   opacity: 1;
 }
@@ -804,6 +854,10 @@ p {
 @media (min-width: 1024px) {
   .store-badge {
     width: 230px;
+  }
+
+  .store-badge--play {
+    width: 259px;
   }
 }
 
