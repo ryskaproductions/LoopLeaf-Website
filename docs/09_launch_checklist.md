@@ -80,7 +80,7 @@ Aktuell kein Cookie-Banner erforderlich, da keine einwilligungspflichtigen Cooki
 
 ## Rechtliches
 
-- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitte 5, 5a und 6 aktualisiert + Abschnitt 7 neu eingefügt; Abschnitt 6 erneut aktualisiert auf Basis `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_8Juni2026.docx`, Stand 07.06.2026)
+- [x] Datenschutztext vollständig aus finaler Quelldatei übernommen (Abschnitte 5, 5a und 6 aktualisiert + Abschnitt 7 neu eingefügt; Abschnitt 6 zuletzt am 23.06.2026 vollständig ersetzt auf Basis `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_23Juni2026.docx`, Stand 26.06.2026)
 - [x] Abschnitt 7 „Datenschutzhinweise für unser Instagram-Profil @loopleaf.app" eingefügt (nur Text, keine technische Instagram-Einbindung)
 - [x] Datenschutztext nicht automatisch umformuliert
 - [x] Impressum verlinkt korrekt extern

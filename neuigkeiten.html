@@ -103,7 +103,36 @@
 
         <ol class="news-list" role="list">
 
-          <!-- Eintrag 1 – Android Release (neueste oben) -->
+          <!-- Eintrag 1 – Neue Funktionen: Teilen, Suchen, Geburtstage, Archiv (neueste oben) -->
+          <li class="news-card">
+            <div class="news-card__media">
+              <picture>
+                <!-- Row-Layout (Bild neben Text, ab 768 px): Hochkant-Asset.
+                     Gestapelt (Bild über Text, < 768 px): bisheriges Querformat-Asset. -->
+                <source media="(min-width: 768px)" srcset="assets/images/news_search_birthday_share_archive_hochkant.PNG">
+                <img
+                  src="assets/images/news_search_birthday_share_archive.PNG"
+                  alt="LoopLeaf-Funktionen für Suche, Geburtstage, Teilen von Textideen und Archiv"
+                  class="news-card__image"
+                >
+              </picture>
+            </div>
+            <div class="news-card__body">
+              <p class="news-card__date"><time datetime="2026-06-26">26. Juni 2026</time></p>
+              <ul class="news-card__badges" role="list">
+                <li class="news-card__badge">iOS</li>
+                <li class="news-card__badge">Android</li>
+                <li class="news-card__badge">Update</li>
+                <li class="news-card__badge">Neue Funktionen</li>
+              </ul>
+              <h2 class="news-card__title">Neue Funktionen für LoopLeaf: Teilen, Suchen, Geburtstage und Archiv</h2>
+              <p class="news-card__text">Dank eures Feedbacks ist LoopLeaf wieder ein Stück weitergewachsen. Mit dem neuen Share-Button kannst du Textideen direkt über Messenger und andere Apps teilen, ohne sie vorher kopieren zu müssen. Die neue Suchfunktion bringt dich schneller zum richtigen Kontakt. Außerdem kannst du optional Geburtstage hinterlegen. Hat jemand heute oder morgen Geburtstag, erinnert dich LoopLeaf auf der Heute-Seite daran.</p>
+              <p class="news-card__text">Neu ist auch das Kontaktarchiv: Kontakte, die vorübergehend nicht in deinem aktiven Rhythmus berücksichtigt werden sollen, kannst du jetzt archivieren. Sie erscheinen dann nicht mehr auf der Heute-Seite und lassen sich jederzeit wieder aktivieren.</p>
+            </div>
+          </li>
+
+
+          <!-- Eintrag 2 – Android Release -->
           <li class="news-card">
             <div class="news-card__media">
               <img
@@ -126,7 +155,7 @@
           </li>
 
 
-          <!-- Eintrag 2 – iOS Dark Mode -->
+          <!-- Eintrag 3 – iOS Dark Mode -->
           <li class="news-card">
             <div class="news-card__media">
               <img
@@ -148,7 +177,7 @@
           </li>
 
 
-          <!-- Eintrag 3 – iOS Release -->
+          <!-- Eintrag 4 – iOS Release -->
           <li class="news-card">
             <div class="news-card__media">
               <img

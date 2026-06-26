@@ -2053,6 +2053,11 @@ p {
   max-width: none;
 }
 
+/* Abstand zwischen mehreren Absätzen innerhalb derselben News-Karte */
+.news-card__text + .news-card__text {
+  margin-top: var(--space-sm);
+}
+
 /* Desktop ab 768 px: Bild links, Text rechts */
 @media (min-width: 768px) {
   .news-card {

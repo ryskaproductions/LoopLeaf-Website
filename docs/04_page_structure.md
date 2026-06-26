@@ -241,9 +241,12 @@ Karten-Struktur (`.news-card`):
 
 Sichtbare Einträge (neuester oben):
 
-1. **10. Juni 2026** – „LoopLeaf ist jetzt auch für Android da" (Bild: `assets/images/news_android_release.PNG`; zentrierter Crop, kein Modifier – zwei mittig komponierte Smartphones)
-2. **7. Juni 2026** – „LoopLeaf bekommt einen Dark Mode für iOS" (Bild: `assets/images/news_darkmode_ios.PNG`)
-3. **28. Mai 2026** – „LoopLeaf ist im App Store gestartet" (Bild: `assets/images/news_ios_release3.PNG`; Modifier `news-card__image--focus-right` für rechtsbetonten Crop in der Tablet-Ansicht)
+1. **26. Juni 2026** – „Neue Funktionen für LoopLeaf: Teilen, Suchen, Geburtstage und Archiv" (zwei responsive Bildvarianten via `<picture>` – siehe Hinweis unten)
+2. **10. Juni 2026** – „LoopLeaf ist jetzt auch für Android da" (Bild: `assets/images/news_android_release.PNG`; zentrierter Crop, kein Modifier – zwei mittig komponierte Smartphones)
+3. **7. Juni 2026** – „LoopLeaf bekommt einen Dark Mode für iOS" (Bild: `assets/images/news_darkmode_ios.PNG`)
+4. **28. Mai 2026** – „LoopLeaf ist im App Store gestartet" (Bild: `assets/images/news_ios_release3.PNG`; Modifier `news-card__image--focus-right` für rechtsbetonten Crop in der Tablet-Ansicht)
+
+Am 26. Juni 2026 wurde als neuester Beitrag (oben) ein Funktions-Update ergänzt; der Beitrag beschreibt vier Funktionsbereiche: direktes Teilen von Textideen über den Share-Button, Suchfunktion auf der Kontakte-Seite, optionale Geburtstage mit Anzeige für heute und morgen auf der Heute-Seite sowie das Kontaktarchiv (Ausblenden archivierter Kontakte auf der Heute-Seite und spätere Reaktivierung). Der Beitrag ordnet die Funktionen als Weiterentwicklung aus Nutzerfeedback ein. Der Text ist zweiteilig (zwei `news-card__text`-Absätze, Abstand via `.news-card__text + .news-card__text`). Wegen des längeren Textes nutzt nur dieser oberste Beitrag zwei responsive Bildvarianten über ein `<picture>`-Element (Umschaltung exakt am Karten-Layout-Breakpoint 768 px, kein CSS nötig): im Row-Layout (Bild neben Text, ab 768 px) das Hochkant-Asset `assets/images/news_search_birthday_share_archive_hochkant.PNG` (4:5), im gestapelten Layout (Bild über Text, < 768 px) weiterhin das Querformat-Asset `assets/images/news_search_birthday_share_archive.PNG` (8:5).
 
 Der Android-Release-Eintrag wurde am 10. Juni 2026 sichtbar veröffentlicht (zuvor als vorbereiteter HTML-Kommentar hinterlegt). Es gibt aktuell keinen versteckten/vorbereiteten Eintrag mehr.
 

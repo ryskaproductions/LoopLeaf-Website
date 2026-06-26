@@ -94,6 +94,26 @@ Nicht:
 
 ## Änderungshistorie Datenschutzerklärung
 
+### 23.06.2026 – Abschnitt 6 vollständig ersetzt
+
+Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" in `datenschutz.html` vollständig und wortgetreu durch die Fassung aus der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_23Juni2026.docx` ersetzt. Sichtbares Stand-Datum von 07.06.2026 auf 23.06.2026 aktualisiert. Abschnitte 1 bis 5a sowie Abschnitt 7 und Footer/Navigation unverändert.
+
+**Neu bzw. ausführlicher in der Fassung berücksichtigt:**
+
+- Kontaktarchiv (Archivieren, Aktivieren, Archivstatus und Archivierungszeitpunkt)
+- optionale Geburtstagsfunktion (Tag/Monat, optionales Jahr; standardmäßig deaktiviert)
+- lokale Kontaktsuche (verarbeitet nur Kontaktnamen, kein Suchverlauf)
+- Kopieren und systemeigenes Teilen von Textideen über das Betriebssystem-Teilen-Menü
+- lokale Speicherung und Löschung (Archivieren, Ausblenden, Löschen, „Alle Daten löschen")
+- iOS-Backups und Geräte-Backups (iCloud-Backup bzw. Computer-Backup)
+- Android-Backup- und Geräteübertragungsfunktionen (Android Auto Backup appseitig deaktiviert)
+- keine eigene Cloud-Synchronisation (kein iCloud-/CloudKit-/Google-Konto-Sync durch uns)
+- keine Analyse, kein Tracking und keine Werbung in der App
+
+**Technische Prüfung erfolgreich:** gültige HTML-Struktur, ausgeglichene Tags, Desktop- und Mobile-Prüfung, keine Konsolenfehler, kein horizontales Scrollen. Es wurden ausschließlich Abschnitt 6 und das Stand-Datum in `datenschutz.html` geändert; keine CSS-, JavaScript-, Navigations-, Footer-, Konfigurations- oder Deployment-Dateien.
+
+**Hinweis:** Die Quellfassung liegt zum Abgleich im Docs-Ordner unter `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_23Juni2026.docx`.
+
 ### 07.06.2026 – Abschnitt 6 aktualisiert
 
 Abschnitt 6 „Datenschutz in den mobilen Apps ‚LoopLeaf'" auf Basis der Quelldatei `Datenschutzerklaerung_LoopLeaf_Vercel_iOS_und_Android_8Juni2026.docx` vollständig ersetzt. Stand-Datum aktualisiert auf 07.06.2026. Abschnitte 1–4, 5, 5a und 7 sowie Footer/Navigation unverändert.

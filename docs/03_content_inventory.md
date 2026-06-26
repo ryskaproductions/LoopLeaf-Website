@@ -321,7 +321,7 @@ Text:
 ```text
 Manchmal ist die Hürde zu schreiben groß, obwohl du dich gerne melden würdest.
 
-LoopLeaf gibt dir kleine Nachrichtenvorschläge, die du kopieren, anpassen oder als Inspiration nutzen kannst.
+LoopLeaf gibt dir kleine Nachrichtenvorschläge, die du kopieren, anpassen, direkt über Messenger und andere Apps teilen oder als Inspiration nutzen kannst.
 ```
 
 Asset-/Alt-Hinweis:
