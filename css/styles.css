@@ -1406,6 +1406,13 @@ p {
   overflow-wrap: break-word;
 }
 
+/* Informationsseiten ohne Datumszeile (z. B. Hinweise zum Bildmaterial):
+   Der Abstand, den sonst .privacy-stand erzeugt, wird hier nachgebildet,
+   damit die Seiten denselben Leserhythmus behalten. */
+.privacy-content h1 + p:not(.privacy-stand) {
+  margin-top: clamp(28px, 4vw, 48px);
+}
+
 /* Datumszeile */
 .privacy-stand {
   font-family: var(--font-body);
@@ -2088,5 +2095,74 @@ p {
 @media (min-width: 768px) and (max-width: 1023px) {
   .news-card__image--focus-right {
     object-position: 68% center;
+  }
+}
+
+
+/* ================================================================
+   KI-KENNZEICHNUNG – offizielle EU-Labels als Bild-Overlay
+   ================================================================
+   Wiederverwendbare Komponente. Das Label wird NICHT ins Motiv
+   gerendert, sondern als eigenes Element darübergelegt. Die
+   offiziellen SVG-Dateien werden unverändert eingebunden
+   (Farbwirkung, Seitenverhältnis 3:1 und Inhalt bleiben erhalten).
+
+   Verwendung:
+     <div class="… ai-labeled">        <- beliebiger Bildcontainer
+       <img …>
+       <a class="ai-label" href="bildmaterial.html" aria-label="…">
+         <img class="ai-label__img" src="…LABEL_AI MODIFIED….svg" alt="" aria-hidden="true">
+       </a>
+     </div>
+
+   Für „AI GENERATED“ genügt der Austausch der SVG-Datei; für die
+   Platzierung unten links zusätzlich .ai-label--bottom-left.
+   ================================================================ */
+
+.ai-labeled {
+  position: relative;
+}
+
+.ai-label {
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+  /* Die offiziellen SVGs bringen rundum eigene transparente Randzonen
+     mit. Zusammen mit dieser kleinen CSS-Einrückung ergibt sich ein
+     optischer Abstand von rund 12–18 px zum Bildrand. */
+  width: clamp(96px, 26%, 132px);
+  display: block;
+  line-height: 0;
+  border-radius: var(--radius-pill);
+  transition: opacity var(--transition-fast);
+}
+
+/* Ausweichposition, falls unten rechts wichtige Bildinhalte liegen */
+.ai-label--bottom-left {
+  right: auto;
+  left: 4px;
+}
+
+.ai-label__img {
+  display: block;
+  width: 100%;
+  height: auto; /* Seitenverhältnis des offiziellen Labels bleibt erhalten */
+}
+
+a.ai-label:hover {
+  opacity: 0.85;
+}
+
+/* Fokusring mit hellem Saum, damit er auf hellen wie dunklen
+   Bildbereichen sichtbar bleibt. */
+a.ai-label:focus-visible {
+  outline: 2px solid var(--color-dark-green);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-label {
+    transition: none;
   }
 }
